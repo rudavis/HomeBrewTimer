@@ -8,4 +8,6 @@
 .DS_Store
 
 # Ignore code project files
-HomeBrewTimer.xcodeproj/*.*
+*.xcuserdatad
+*.xcuserstate
+HomeBrewTimer.xcodeproj/project.xcworkspace/xcuserdata/russ_davis.xcuserdatad/UserInterfaceState.xcuserstate
