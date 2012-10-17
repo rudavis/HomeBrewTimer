@@ -10,3 +10,5 @@
 # Ignore code project files
 *.xcuserdatad
 *.xcuserstate
+
+*.xcuserstate
