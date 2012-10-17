@@ -19,13 +19,15 @@
 
 @property (strong, nonatomic) IBOutlet UIDatePicker *timerPicker;
 @property (strong, nonatomic) IBOutlet UILabel *timerDisplay;
-@property (strong, nonatomic) IBOutlet UIButton *stopButton;
-@property (strong, nonatomic) IBOutlet UIButton *resumeButton;
+@property (strong, nonatomic) IBOutlet UIButton *pauseButton;
+@property (strong, nonatomic) IBOutlet UIButton *cancelButton;
 @property (strong, nonatomic) IBOutlet UIButton *startButton;
 
 - (IBAction)startTimer:(id)sender;
-- (IBAction)stopTimer:(id)sender;
+- (IBAction)cancelTimer:(id)sender;
+- (IBAction)pauseOrResumeTimer:(id)sender;
 - (void)showActivity;
-
+- (void)fadeOut:(UIView *)viewToDissolve withDuration:(NSTimeInterval)duration andWait:(NSTimeInterval)wait;
+- (void)fadeIn:(UIView*)viewToFadeIn withDuration:(NSTimeInterval)duration andWait:(NSTimeInterval)wait;
 
 @end

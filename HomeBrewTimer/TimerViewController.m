@@ -16,18 +16,24 @@
 
 @synthesize timerPicker = _timerPicker;
 @synthesize timerDisplay = _timerDisplay;
-@synthesize stopButton = _stopButton;
-@synthesize resumeButton = _resumeButton;
+@synthesize pauseButton = _pauseButton;
+@synthesize cancelButton = _cancelButton;
 @synthesize startButton = _startButton;
 
 - (IBAction)startTimer:(id)sender {
     
-    [_timerPicker setHidden:YES];
+    //[_timerPicker setHidden:YES];
+    [self fadeOut:_timerPicker withDuration:0.5 andWait:0.0];
     [_timerDisplay setHidden:NO];
     
-    [_stopButton setHidden:NO];
-    [_resumeButton setHidden:NO];
-    [_startButton setHidden:YES];
+    //[_stopButton setHidden:NO];
+    //[_resumeButton setHidden:NO];
+    //[_startButton setHidden:YES];
+    [_pauseButton setTitle:@"Pause" forState:UIControlStateNormal];
+    [self fadeOut:_startButton withDuration:0.5 andWait:0.0];
+    [self fadeIn:_pauseButton withDuration:0.5 andWait:0.5];
+    [self fadeIn:_cancelButton withDuration:0.5 andWait:0.5];
+    
     timerRunning = YES;
     
     timerSec = _timerPicker.countDownDuration;
@@ -40,18 +46,48 @@
     
 }
 
-- (IBAction)stopTimer:(id)sender {
+- (IBAction)cancelTimer:(id)sender {
 
-    [_timerPicker setHidden:NO];
+    //[_timerPicker setHidden:NO];
+    [self fadeIn:_timerPicker withDuration:0.5 andWait:0.5];
     [_timerDisplay setHidden:YES];
     
-    [_stopButton setHidden:YES];
-    [_resumeButton setHidden:YES];
-    [_startButton setHidden:NO];
+    //[_pauseButton setHidden:YES];
+    //[_cancelButton setHidden:YES];
+    //[_startButton setHidden:NO];
+    [self fadeOut:_pauseButton withDuration:0.5 andWait:0.0];
+    [self fadeOut:_cancelButton withDuration:0.5 andWait:0.0];
+    [self fadeIn:_startButton withDuration:0.5 andWait:0.5];
+
     timerRunning = NO;
     
     [myTicker invalidate];
     myTicker = nil;
+}
+
+- (IBAction)pauseOrResumeTimer:(id)sender {
+    if (timerRunning) {
+        //Timer is running so we want to PAUSE
+        //save the seconds remaining;
+        //Change the text on Pause button to RESUME
+        timerRunning = NO;
+        [_pauseButton setTitle:@"Resume" forState:UIControlStateNormal];
+        [myTicker invalidate];
+        myTicker = nil;
+    } else {
+        //Timer is not running so the user want's to RESUME
+        //Restart myTicker
+        //Resume countdown
+        //change Resume to PAUSE
+        timerRunning = YES;
+        [_pauseButton setTitle:@"Pause" forState:UIControlStateNormal];
+        myTicker = [NSTimer scheduledTimerWithTimeInterval: 0.1
+                                                    target: self
+                                                  selector: @selector(showActivity)
+                                                  userInfo: nil
+                                                   repeats: YES];
+
+    }
 }
 
 - (void)showActivity
@@ -63,8 +99,27 @@
     if (timerSec>0) {
         timerSec--;
     } else {
-        [self stopTimer:_stopButton];
+        [self cancelTimer:_cancelButton];
     }
+}
+
+- (void)fadeOut:(UIView *)viewToDissolve withDuration:(NSTimeInterval)duration andWait:(NSTimeInterval)wait
+{
+    [UIView beginAnimations: @"Fade Out" context:nil];
+	[UIView setAnimationDelay:wait];
+	[UIView setAnimationDuration:duration];
+	viewToDissolve.alpha = 0.0;
+	[UIView commitAnimations];
+}
+
+-(void)fadeIn:(UIView*)viewToFadeIn withDuration:(NSTimeInterval)duration
+	  andWait:(NSTimeInterval)wait
+{
+	[UIView beginAnimations: @"Fade In" context:nil];
+	[UIView setAnimationDelay:wait];
+	[UIView setAnimationDuration:duration];
+	viewToFadeIn.alpha = 1;
+	[UIView commitAnimations];
 }
 
 - (void)viewDidLoad
