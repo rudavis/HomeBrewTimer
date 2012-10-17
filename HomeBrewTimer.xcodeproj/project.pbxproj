@@ -19,10 +19,7 @@
 		C728070D1628CE9500D74727 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C728070C1628CE9500D74727 /* Default-568h@2x.png */; };
 		C72807101628CE9500D74727 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C728070E1628CE9500D74727 /* MainStoryboard.storyboard */; };
 		C72807131628CE9500D74727 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72807121628CE9500D74727 /* FirstViewController.m */; };
-		C72807151628CE9500D74727 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = C72807141628CE9500D74727 /* first.png */; };
-		C72807171628CE9500D74727 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C72807161628CE9500D74727 /* first@2x.png */; };
-		C728071C1628CE9500D74727 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = C728071B1628CE9500D74727 /* second.png */; };
-		C728071E1628CE9500D74727 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C728071D1628CE9500D74727 /* second@2x.png */; };
+		C73031BC162F6FAB002C744A /* stopwatch.png in Resources */ = {isa = PBXBuildFile; fileRef = C73031BB162F6FAB002C744A /* stopwatch.png */; };
 		C739EAC116290855000E95CB /* RecipesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C739EAC016290855000E95CB /* RecipesViewController.m */; };
 		C739EAC5162908BB000E95CB /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = C739EAC4162908BB000E95CB /* Recipe.m */; };
 		C7B5BDC71629B5AA002949B4 /* RecipeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B5BDC61629B5AA002949B4 /* RecipeDetailViewController.m */; };
@@ -48,10 +45,7 @@
 		C728070F1628CE9500D74727 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		C72807111628CE9500D74727 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		C72807121628CE9500D74727 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		C72807141628CE9500D74727 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		C72807161628CE9500D74727 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		C728071B1628CE9500D74727 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		C728071D1628CE9500D74727 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		C73031BB162F6FAB002C744A /* stopwatch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stopwatch.png; sourceTree = "<group>"; };
 		C739EABF16290855000E95CB /* RecipesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipesViewController.h; sourceTree = "<group>"; };
 		C739EAC016290855000E95CB /* RecipesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipesViewController.m; sourceTree = "<group>"; };
 		C739EAC3162908BB000E95CB /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
@@ -123,10 +117,6 @@
 				C739EAC016290855000E95CB /* RecipesViewController.m */,
 				C72807111628CE9500D74727 /* FirstViewController.h */,
 				C72807121628CE9500D74727 /* FirstViewController.m */,
-				C72807141628CE9500D74727 /* first.png */,
-				C72807161628CE9500D74727 /* first@2x.png */,
-				C728071B1628CE9500D74727 /* second.png */,
-				C728071D1628CE9500D74727 /* second@2x.png */,
 				C72806FD1628CE9500D74727 /* Supporting Files */,
 			);
 			path = HomeBrewTimer;
@@ -135,6 +125,7 @@
 		C72806FD1628CE9500D74727 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C73031BB162F6FAB002C744A /* stopwatch.png */,
 				C716EC3F162E310B0056FB09 /* background_image.png */,
 				C72806FE1628CE9500D74727 /* HomeBrewTimer-Info.plist */,
 				C72806FF1628CE9500D74727 /* InfoPlist.strings */,
@@ -203,11 +194,8 @@
 				C728070B1628CE9500D74727 /* Default@2x.png in Resources */,
 				C728070D1628CE9500D74727 /* Default-568h@2x.png in Resources */,
 				C72807101628CE9500D74727 /* MainStoryboard.storyboard in Resources */,
-				C72807151628CE9500D74727 /* first.png in Resources */,
-				C72807171628CE9500D74727 /* first@2x.png in Resources */,
-				C728071C1628CE9500D74727 /* second.png in Resources */,
-				C728071E1628CE9500D74727 /* second@2x.png in Resources */,
 				C716EC40162E310B0056FB09 /* background_image.png in Resources */,
+				C73031BC162F6FAB002C744A /* stopwatch.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
