@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C716EC40162E310B0056FB09 /* background_image.png in Resources */ = {isa = PBXBuildFile; fileRef = C716EC3F162E310B0056FB09 /* background_image.png */; };
 		C72806F71628CE9500D74727 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72806F61628CE9500D74727 /* UIKit.framework */; };
 		C72806F91628CE9500D74727 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72806F81628CE9500D74727 /* Foundation.framework */; };
 		C72806FB1628CE9500D74727 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72806FA1628CE9500D74727 /* CoreGraphics.framework */; };
@@ -20,15 +21,17 @@
 		C72807131628CE9500D74727 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72807121628CE9500D74727 /* FirstViewController.m */; };
 		C72807151628CE9500D74727 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = C72807141628CE9500D74727 /* first.png */; };
 		C72807171628CE9500D74727 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C72807161628CE9500D74727 /* first@2x.png */; };
-		C728071A1628CE9500D74727 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72807191628CE9500D74727 /* SecondViewController.m */; };
 		C728071C1628CE9500D74727 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = C728071B1628CE9500D74727 /* second.png */; };
 		C728071E1628CE9500D74727 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C728071D1628CE9500D74727 /* second@2x.png */; };
 		C739EAC116290855000E95CB /* RecipesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C739EAC016290855000E95CB /* RecipesViewController.m */; };
 		C739EAC5162908BB000E95CB /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = C739EAC4162908BB000E95CB /* Recipe.m */; };
 		C7B5BDC71629B5AA002949B4 /* RecipeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B5BDC61629B5AA002949B4 /* RecipeDetailViewController.m */; };
+		C7E5DB5D162DC7E200CF0F0D /* Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E5DB5C162DC7E200CF0F0D /* Timer.m */; };
+		C7E5DB60162DC80B00CF0F0D /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E5DB5F162DC80B00CF0F0D /* TimerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C716EC3F162E310B0056FB09 /* background_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_image.png; sourceTree = "<group>"; };
 		C72806F21628CE9500D74727 /* HomeBrewTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeBrewTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C72806F61628CE9500D74727 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C72806F81628CE9500D74727 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -47,8 +50,6 @@
 		C72807121628CE9500D74727 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		C72807141628CE9500D74727 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		C72807161628CE9500D74727 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		C72807181628CE9500D74727 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		C72807191628CE9500D74727 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		C728071B1628CE9500D74727 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		C728071D1628CE9500D74727 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		C739EABF16290855000E95CB /* RecipesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipesViewController.h; sourceTree = "<group>"; };
@@ -57,6 +58,10 @@
 		C739EAC4162908BB000E95CB /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipe.m; sourceTree = "<group>"; };
 		C7B5BDC51629B5AA002949B4 /* RecipeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeDetailViewController.h; sourceTree = "<group>"; };
 		C7B5BDC61629B5AA002949B4 /* RecipeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeDetailViewController.m; sourceTree = "<group>"; };
+		C7E5DB5B162DC7E200CF0F0D /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
+		C7E5DB5C162DC7E200CF0F0D /* Timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timer.m; sourceTree = "<group>"; };
+		C7E5DB5E162DC80B00CF0F0D /* TimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
+		C7E5DB5F162DC80B00CF0F0D /* TimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +108,8 @@
 		C72806FC1628CE9500D74727 /* HomeBrewTimer */ = {
 			isa = PBXGroup;
 			children = (
+				C7E5DB5E162DC80B00CF0F0D /* TimerViewController.h */,
+				C7E5DB5F162DC80B00CF0F0D /* TimerViewController.m */,
 				C72807051628CE9500D74727 /* AppDelegate.h */,
 				C72807061628CE9500D74727 /* AppDelegate.m */,
 				C728070E1628CE9500D74727 /* MainStoryboard.storyboard */,
@@ -110,14 +117,14 @@
 				C7B5BDC61629B5AA002949B4 /* RecipeDetailViewController.m */,
 				C739EABF16290855000E95CB /* RecipesViewController.h */,
 				C739EAC3162908BB000E95CB /* Recipe.h */,
+				C7E5DB5B162DC7E200CF0F0D /* Timer.h */,
+				C7E5DB5C162DC7E200CF0F0D /* Timer.m */,
 				C739EAC4162908BB000E95CB /* Recipe.m */,
 				C739EAC016290855000E95CB /* RecipesViewController.m */,
 				C72807111628CE9500D74727 /* FirstViewController.h */,
 				C72807121628CE9500D74727 /* FirstViewController.m */,
 				C72807141628CE9500D74727 /* first.png */,
 				C72807161628CE9500D74727 /* first@2x.png */,
-				C72807181628CE9500D74727 /* SecondViewController.h */,
-				C72807191628CE9500D74727 /* SecondViewController.m */,
 				C728071B1628CE9500D74727 /* second.png */,
 				C728071D1628CE9500D74727 /* second@2x.png */,
 				C72806FD1628CE9500D74727 /* Supporting Files */,
@@ -128,6 +135,7 @@
 		C72806FD1628CE9500D74727 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C716EC3F162E310B0056FB09 /* background_image.png */,
 				C72806FE1628CE9500D74727 /* HomeBrewTimer-Info.plist */,
 				C72806FF1628CE9500D74727 /* InfoPlist.strings */,
 				C72807021628CE9500D74727 /* main.m */,
@@ -199,6 +207,7 @@
 				C72807171628CE9500D74727 /* first@2x.png in Resources */,
 				C728071C1628CE9500D74727 /* second.png in Resources */,
 				C728071E1628CE9500D74727 /* second@2x.png in Resources */,
+				C716EC40162E310B0056FB09 /* background_image.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,10 +221,11 @@
 				C72807031628CE9500D74727 /* main.m in Sources */,
 				C72807071628CE9500D74727 /* AppDelegate.m in Sources */,
 				C72807131628CE9500D74727 /* FirstViewController.m in Sources */,
-				C728071A1628CE9500D74727 /* SecondViewController.m in Sources */,
 				C739EAC116290855000E95CB /* RecipesViewController.m in Sources */,
 				C739EAC5162908BB000E95CB /* Recipe.m in Sources */,
 				C7B5BDC71629B5AA002949B4 /* RecipeDetailViewController.m in Sources */,
+				C7E5DB5D162DC7E200CF0F0D /* Timer.m in Sources */,
+				C7E5DB60162DC80B00CF0F0D /* TimerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
