@@ -4,13 +4,28 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile ~/.gitignore_global
 
-# Ignore the .DS_Store file
+# OS X Finder
 .DS_Store
 
-# Ignore code project files
-*.xcuserdatad
-*.xcuserstate
+# Xcode per-user config
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.pbxuser
+*.xcworkspace
+xcuserdata
 
-*.xcuserstate
+# Build products
+build/
+*.o
+*.LinkFileList
+*.hmap
 
-HomeBrewTimer.xcodeproj/project.xcworkspace/xcuserdata/russ_davis.xcuserdatad/UserInterfaceState.xcuserstate
+# Automatic backup files
+*~.nib/
+*.swp
+*~
+*.dat
+*.dep
