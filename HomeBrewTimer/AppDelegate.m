@@ -17,6 +17,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+
     recipes = [NSMutableArray arrayWithCapacity:20];
     Recipe *recipe = [[Recipe alloc] init];
     recipe.name = @"Best IPA";
@@ -40,6 +41,7 @@
     UINavigationController *navigationController = [[tabBarController viewControllers] objectAtIndex:0];
     RecipesViewController *recipesViewController = [[navigationController viewControllers] objectAtIndex:0];
     recipesViewController.recipes = recipes;
+ 
     
     return YES;
 }

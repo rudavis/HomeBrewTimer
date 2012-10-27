@@ -63,7 +63,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background_image.png" translatesAutoresizingMaskIntoConstraints="NO" id="cyN-Jz-hyR"/>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="3600" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="GsD-Ri-7Hm">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="216" id="phq-sI-IkS"/>
+                                    <constraint firstAttribute="height" constant="216" id="fAA-cw-d1p"/>
                                 </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="372097356.25903398">
                                     <!--2012-10-16 16:22:36 +0000-->
@@ -145,8 +145,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="njf-nb-CKG" secondAttribute="bottom" constant="13" id="4NI-cp-uyy"/>
                             <constraint firstItem="njf-nb-CKG" firstAttribute="leading" secondItem="kIZ-Gb-drt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="5Wr-jO-ofO"/>
-                            <constraint firstAttribute="bottom" secondItem="bzw-Ed-0t0" secondAttribute="bottom" constant="13" id="JmB-PS-3h1"/>
                             <constraint firstItem="GsD-Ri-7Hm" firstAttribute="centerX" secondItem="AGT-qo-Hjr" secondAttribute="centerX" type="default" id="RRg-jw-uRS"/>
                             <constraint firstItem="cyN-Jz-hyR" firstAttribute="top" secondItem="kIZ-Gb-drt" secondAttribute="top" type="default" id="XA7-Yg-wbi"/>
                             <constraint firstItem="cyN-Jz-hyR" firstAttribute="leading" secondItem="kIZ-Gb-drt" secondAttribute="leading" type="default" id="XR8-3F-7Dn"/>
@@ -157,7 +157,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <constraint firstItem="cyN-Jz-hyR" firstAttribute="bottom" secondItem="kIZ-Gb-drt" secondAttribute="bottom" type="default" id="iI3-JP-fgM"/>
                             <constraint firstItem="AGT-qo-Hjr" firstAttribute="top" secondItem="kIZ-Gb-drt" secondAttribute="top" constant="66" id="iQx-kY-LtR"/>
                             <constraint firstItem="GsD-Ri-7Hm" firstAttribute="top" secondItem="kIZ-Gb-drt" secondAttribute="top" type="default" id="jWb-Mm-miW"/>
-                            <constraint firstItem="bzw-Ed-0t0" firstAttribute="baseline" secondItem="njf-nb-CKG" secondAttribute="baseline" type="default" id="uQi-G7-U6f"/>
+                            <constraint firstItem="Ek4-3D-Ro3" firstAttribute="baseline" secondItem="njf-nb-CKG" secondAttribute="baseline" type="default" id="jkm-ZH-5OM"/>
                             <constraint firstAttribute="trailing" secondItem="bzw-Ed-0t0" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="xDq-4i-Ufj"/>
                             <constraint firstItem="bzw-Ed-0t0" firstAttribute="leading" secondItem="kIZ-Gb-drt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="zCQ-ut-uhL"/>
                         </constraints>
