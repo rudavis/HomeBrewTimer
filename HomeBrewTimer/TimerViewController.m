@@ -7,9 +7,10 @@
 //
 
 #import "TimerViewController.h"
+#import "ActionSheetPicker.h"
 
 @interface TimerViewController ()
-
+- (void) timerWasSelected:(NSDate *)selectedTime element:(id)element;
 @end
 
 @implementation TimerViewController
@@ -19,6 +20,25 @@
 @synthesize pauseButton = _pauseButton;
 @synthesize cancelButton = _cancelButton;
 @synthesize startButton = _startButton;
+@synthesize timerTextField = _timerTextField;
+@synthesize selectedDate = _selectedDate;
+@synthesize actionSheetPicker = _actionSheetPicker;
+
+- (IBAction)selectTimerTextField:(id)sender {
+    _actionSheetPicker = [[ActionSheetDatePicker alloc] initWithTitle:@"" datePickerMode:UIDatePickerModeDate selectedDate:self.selectedDate target:self action:@selector(timerWasSelected:element:) origin:sender];
+    self.actionSheetPicker.hideCancel = NO;
+    [self.actionSheetPicker showActionSheetPicker];
+}
+
+-(void) timerWasSelected:(NSDate *)selectedTime element:(id)element{
+    self.selectedDate = selectedTime;
+
+    self.timerTextField.text = [self.selectedDate description];
+}
+
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    return NO;
+}
 
 - (IBAction)startTimer:(id)sender {
     
@@ -129,6 +149,13 @@
     minRemaining = 0;
     timerRunning = NO;
     
+    self.selectedDate = [NSDate date];
+}
+
+- (void)dealloc {
+    self.selectedDate = nil;
+    self.actionSheetPicker = nil;
+    [super dealloc];
 }
 
 - (void)didReceiveMemoryWarning

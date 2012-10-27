@@ -8,21 +8,29 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TimerViewController : UIViewController
+@class AbstractActionSheetPicker;
+@interface TimerViewController : UIViewController <UITextFieldDelegate>
 {
     NSTimer *myTicker;
     NSInteger timerSec;
+    NSInteger timerSec2;
     NSInteger minRemaining;
     NSInteger secRemaining;
     BOOL timerRunning;
 }
 
+@property (strong, nonatomic) IBOutlet UITextField *timerTextField;
+@property (strong, nonatomic) NSDate *selectedDate;
 @property (strong, nonatomic) IBOutlet UIDatePicker *timerPicker;
 @property (strong, nonatomic) IBOutlet UILabel *timerDisplay;
 @property (strong, nonatomic) IBOutlet UIButton *pauseButton;
 @property (strong, nonatomic) IBOutlet UIButton *cancelButton;
 @property (strong, nonatomic) IBOutlet UIButton *startButton;
+@property (nonatomic, retain) AbstractActionSheetPicker *actionSheetPicker;
 
+
+
+- (IBAction)selectTimerTextField:(id)sender;
 - (IBAction)startTimer:(id)sender;
 - (IBAction)cancelTimer:(id)sender;
 - (IBAction)pauseOrResumeTimer:(id)sender;

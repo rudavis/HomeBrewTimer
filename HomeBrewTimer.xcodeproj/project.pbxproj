@@ -18,11 +18,15 @@
 		C728070B1628CE9500D74727 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C728070A1628CE9500D74727 /* Default@2x.png */; };
 		C728070D1628CE9500D74727 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C728070C1628CE9500D74727 /* Default-568h@2x.png */; };
 		C72807101628CE9500D74727 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C728070E1628CE9500D74727 /* MainStoryboard.storyboard */; };
-		C72807131628CE9500D74727 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72807121628CE9500D74727 /* FirstViewController.m */; };
 		C73031BC162F6FAB002C744A /* stopwatch.png in Resources */ = {isa = PBXBuildFile; fileRef = C73031BB162F6FAB002C744A /* stopwatch.png */; };
 		C739EAC116290855000E95CB /* RecipesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C739EAC016290855000E95CB /* RecipesViewController.m */; };
 		C739EAC5162908BB000E95CB /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = C739EAC4162908BB000E95CB /* Recipe.m */; };
 		C7B5BDC71629B5AA002949B4 /* RecipeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B5BDC61629B5AA002949B4 /* RecipeDetailViewController.m */; };
+		C7B6C75D163C11D600FF60DA /* ActionSheetPickerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B6C75A163C11D600FF60DA /* ActionSheetPickerAppDelegate.m */; };
+		C7B6C75E163C11D600FF60DA /* ActionSheetPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B6C75C163C11D600FF60DA /* ActionSheetPickerViewController.m */; };
+		C7B6C764163C12A500FF60DA /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B6C763163C12A500FF60DA /* ActionSheetDatePicker.m */; };
+		C7B6C769163C130E00FF60DA /* NSDate+TCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B6C768163C130E00FF60DA /* NSDate+TCUtils.m */; };
+		C7B6C76B163C13D800FF60DA /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B6C76A163C13D800FF60DA /* AbstractActionSheetPicker.m */; };
 		C7E5DB5D162DC7E200CF0F0D /* Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E5DB5C162DC7E200CF0F0D /* Timer.m */; };
 		C7E5DB60162DC80B00CF0F0D /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E5DB5F162DC80B00CF0F0D /* TimerViewController.m */; };
 /* End PBXBuildFile section */
@@ -43,8 +47,6 @@
 		C728070A1628CE9500D74727 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		C728070C1628CE9500D74727 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C728070F1628CE9500D74727 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		C72807111628CE9500D74727 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		C72807121628CE9500D74727 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		C73031BB162F6FAB002C744A /* stopwatch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stopwatch.png; sourceTree = "<group>"; };
 		C739EABF16290855000E95CB /* RecipesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipesViewController.h; sourceTree = "<group>"; };
 		C739EAC016290855000E95CB /* RecipesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipesViewController.m; sourceTree = "<group>"; };
@@ -52,6 +54,17 @@
 		C739EAC4162908BB000E95CB /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipe.m; sourceTree = "<group>"; };
 		C7B5BDC51629B5AA002949B4 /* RecipeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeDetailViewController.h; sourceTree = "<group>"; };
 		C7B5BDC61629B5AA002949B4 /* RecipeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeDetailViewController.m; sourceTree = "<group>"; };
+		C7B6C759163C11D600FF60DA /* ActionSheetPickerAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetPickerAppDelegate.h; sourceTree = "<group>"; };
+		C7B6C75A163C11D600FF60DA /* ActionSheetPickerAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetPickerAppDelegate.m; sourceTree = "<group>"; };
+		C7B6C75B163C11D600FF60DA /* ActionSheetPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetPickerViewController.h; sourceTree = "<group>"; };
+		C7B6C75C163C11D600FF60DA /* ActionSheetPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetPickerViewController.m; sourceTree = "<group>"; };
+		C7B6C762163C12A500FF60DA /* ActionSheetDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetDatePicker.h; sourceTree = "<group>"; };
+		C7B6C763163C12A500FF60DA /* ActionSheetDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetDatePicker.m; sourceTree = "<group>"; };
+		C7B6C765163C12B300FF60DA /* ActionSheetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetPicker.h; sourceTree = "<group>"; };
+		C7B6C766163C12DF00FF60DA /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractActionSheetPicker.h; sourceTree = "<group>"; };
+		C7B6C767163C130E00FF60DA /* NSDate+TCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TCUtils.h"; sourceTree = "<group>"; };
+		C7B6C768163C130E00FF60DA /* NSDate+TCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TCUtils.m"; sourceTree = "<group>"; };
+		C7B6C76A163C13D800FF60DA /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractActionSheetPicker.m; sourceTree = "<group>"; };
 		C7E5DB5B162DC7E200CF0F0D /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
 		C7E5DB5C162DC7E200CF0F0D /* Timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timer.m; sourceTree = "<group>"; };
 		C7E5DB5E162DC80B00CF0F0D /* TimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
@@ -102,21 +115,14 @@
 		C72806FC1628CE9500D74727 /* HomeBrewTimer */ = {
 			isa = PBXGroup;
 			children = (
+				C7B6C761163C120300FF60DA /* Classes */,
+				C7B6C760163C11E000FF60DA /* ActionSheets */,
 				C7E5DB5E162DC80B00CF0F0D /* TimerViewController.h */,
 				C7E5DB5F162DC80B00CF0F0D /* TimerViewController.m */,
 				C72807051628CE9500D74727 /* AppDelegate.h */,
 				C72807061628CE9500D74727 /* AppDelegate.m */,
 				C728070E1628CE9500D74727 /* MainStoryboard.storyboard */,
-				C7B5BDC51629B5AA002949B4 /* RecipeDetailViewController.h */,
-				C7B5BDC61629B5AA002949B4 /* RecipeDetailViewController.m */,
-				C739EABF16290855000E95CB /* RecipesViewController.h */,
-				C739EAC3162908BB000E95CB /* Recipe.h */,
-				C7E5DB5B162DC7E200CF0F0D /* Timer.h */,
-				C7E5DB5C162DC7E200CF0F0D /* Timer.m */,
-				C739EAC4162908BB000E95CB /* Recipe.m */,
-				C739EAC016290855000E95CB /* RecipesViewController.m */,
-				C72807111628CE9500D74727 /* FirstViewController.h */,
-				C72807121628CE9500D74727 /* FirstViewController.m */,
+				C7B6C76C163C140600FF60DA /* Recipe */,
 				C72806FD1628CE9500D74727 /* Supporting Files */,
 			);
 			path = HomeBrewTimer;
@@ -125,6 +131,8 @@
 		C72806FD1628CE9500D74727 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C7B6C767163C130E00FF60DA /* NSDate+TCUtils.h */,
+				C7B6C768163C130E00FF60DA /* NSDate+TCUtils.m */,
 				C73031BB162F6FAB002C744A /* stopwatch.png */,
 				C716EC3F162E310B0056FB09 /* background_image.png */,
 				C72806FE1628CE9500D74727 /* HomeBrewTimer-Info.plist */,
@@ -136,6 +144,44 @@
 				C728070C1628CE9500D74727 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C7B6C760163C11E000FF60DA /* ActionSheets */ = {
+			isa = PBXGroup;
+			children = (
+				C7B6C765163C12B300FF60DA /* ActionSheetPicker.h */,
+				C7B6C766163C12DF00FF60DA /* AbstractActionSheetPicker.h */,
+				C7B6C76A163C13D800FF60DA /* AbstractActionSheetPicker.m */,
+				C7B6C759163C11D600FF60DA /* ActionSheetPickerAppDelegate.h */,
+				C7B6C75A163C11D600FF60DA /* ActionSheetPickerAppDelegate.m */,
+				C7B6C75B163C11D600FF60DA /* ActionSheetPickerViewController.h */,
+				C7B6C75C163C11D600FF60DA /* ActionSheetPickerViewController.m */,
+				C7B6C762163C12A500FF60DA /* ActionSheetDatePicker.h */,
+				C7B6C763163C12A500FF60DA /* ActionSheetDatePicker.m */,
+			);
+			name = ActionSheets;
+			sourceTree = "<group>";
+		};
+		C7B6C761163C120300FF60DA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C739EAC3162908BB000E95CB /* Recipe.h */,
+				C7E5DB5B162DC7E200CF0F0D /* Timer.h */,
+				C7E5DB5C162DC7E200CF0F0D /* Timer.m */,
+				C739EAC4162908BB000E95CB /* Recipe.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		C7B6C76C163C140600FF60DA /* Recipe */ = {
+			isa = PBXGroup;
+			children = (
+				C7B5BDC51629B5AA002949B4 /* RecipeDetailViewController.h */,
+				C7B5BDC61629B5AA002949B4 /* RecipeDetailViewController.m */,
+				C739EABF16290855000E95CB /* RecipesViewController.h */,
+				C739EAC016290855000E95CB /* RecipesViewController.m */,
+			);
+			name = Recipe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,12 +254,16 @@
 			files = (
 				C72807031628CE9500D74727 /* main.m in Sources */,
 				C72807071628CE9500D74727 /* AppDelegate.m in Sources */,
-				C72807131628CE9500D74727 /* FirstViewController.m in Sources */,
 				C739EAC116290855000E95CB /* RecipesViewController.m in Sources */,
 				C739EAC5162908BB000E95CB /* Recipe.m in Sources */,
 				C7B5BDC71629B5AA002949B4 /* RecipeDetailViewController.m in Sources */,
 				C7E5DB5D162DC7E200CF0F0D /* Timer.m in Sources */,
 				C7E5DB60162DC80B00CF0F0D /* TimerViewController.m in Sources */,
+				C7B6C75D163C11D600FF60DA /* ActionSheetPickerAppDelegate.m in Sources */,
+				C7B6C75E163C11D600FF60DA /* ActionSheetPickerViewController.m in Sources */,
+				C7B6C764163C12A500FF60DA /* ActionSheetDatePicker.m in Sources */,
+				C7B6C769163C130E00FF60DA /* NSDate+TCUtils.m in Sources */,
+				C7B6C76B163C13D800FF60DA /* AbstractActionSheetPicker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,7 +295,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -273,7 +323,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

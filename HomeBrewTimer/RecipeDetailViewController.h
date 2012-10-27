@@ -19,7 +19,7 @@
 
 @interface RecipeDetailViewController : UITableViewController
 
-@property (nonatomic, weak) id <RecipeDetailViewControllerDelegate> delegate;
+@property (strong,nonatomic) id <RecipeDetailViewControllerDelegate> delegate;
 @property (strong, nonatomic) IBOutlet UITextField *nameTextField;
 @property (strong, nonatomic) IBOutlet UILabel *detailLabel;
 

@@ -142,22 +142,34 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <action selector="cancelTimer:" destination="42o-12-j7o" eventType="touchUpInside" id="LBx-uO-wB2"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ueF-m7-hjj">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="275" id="5nh-d1-iJh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="selectTimerTextField:" destination="42o-12-j7o" eventType="touchUpInside" id="sEu-zt-Fzx"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ueF-m7-hjj" firstAttribute="top" secondItem="kIZ-Gb-drt" secondAttribute="top" constant="249" id="1fu-sO-0Rh"/>
                             <constraint firstAttribute="bottom" secondItem="njf-nb-CKG" secondAttribute="bottom" constant="13" id="4NI-cp-uyy"/>
                             <constraint firstItem="njf-nb-CKG" firstAttribute="leading" secondItem="kIZ-Gb-drt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="5Wr-jO-ofO"/>
                             <constraint firstItem="GsD-Ri-7Hm" firstAttribute="centerX" secondItem="AGT-qo-Hjr" secondAttribute="centerX" type="default" id="RRg-jw-uRS"/>
                             <constraint firstItem="cyN-Jz-hyR" firstAttribute="top" secondItem="kIZ-Gb-drt" secondAttribute="top" type="default" id="XA7-Yg-wbi"/>
                             <constraint firstItem="cyN-Jz-hyR" firstAttribute="leading" secondItem="kIZ-Gb-drt" secondAttribute="leading" type="default" id="XR8-3F-7Dn"/>
+                            <constraint firstItem="ueF-m7-hjj" firstAttribute="leading" secondItem="kIZ-Gb-drt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="YAa-1Q-h7Q"/>
                             <constraint firstItem="AGT-qo-Hjr" firstAttribute="leading" secondItem="kIZ-Gb-drt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Zit-gJ-Hpt"/>
                             <constraint firstAttribute="trailing" secondItem="Ek4-3D-Ro3" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="adz-bT-ZAv"/>
-                            <constraint firstItem="Ek4-3D-Ro3" firstAttribute="baseline" secondItem="bzw-Ed-0t0" secondAttribute="baseline" type="default" id="dtl-xx-UzX"/>
                             <constraint firstAttribute="trailing" secondItem="AGT-qo-Hjr" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="eDL-JV-Na1"/>
                             <constraint firstItem="cyN-Jz-hyR" firstAttribute="bottom" secondItem="kIZ-Gb-drt" secondAttribute="bottom" type="default" id="iI3-JP-fgM"/>
                             <constraint firstItem="AGT-qo-Hjr" firstAttribute="top" secondItem="kIZ-Gb-drt" secondAttribute="top" constant="66" id="iQx-kY-LtR"/>
                             <constraint firstItem="GsD-Ri-7Hm" firstAttribute="top" secondItem="kIZ-Gb-drt" secondAttribute="top" type="default" id="jWb-Mm-miW"/>
-                            <constraint firstItem="Ek4-3D-Ro3" firstAttribute="baseline" secondItem="njf-nb-CKG" secondAttribute="baseline" type="default" id="jkm-ZH-5OM"/>
+                            <constraint firstItem="bzw-Ed-0t0" firstAttribute="baseline" secondItem="Ek4-3D-Ro3" secondAttribute="baseline" type="default" id="lnm-o7-lTt"/>
+                            <constraint firstItem="njf-nb-CKG" firstAttribute="baseline" secondItem="bzw-Ed-0t0" secondAttribute="baseline" type="default" id="tCU-dU-AZL"/>
                             <constraint firstAttribute="trailing" secondItem="bzw-Ed-0t0" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="xDq-4i-Ufj"/>
                             <constraint firstItem="bzw-Ed-0t0" firstAttribute="leading" secondItem="kIZ-Gb-drt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="zCQ-ut-uhL"/>
                         </constraints>
@@ -169,6 +181,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <outlet property="startButton" destination="bzw-Ed-0t0" id="6dC-ku-3Hb"/>
                         <outlet property="timerDisplay" destination="AGT-qo-Hjr" id="fsb-IH-kry"/>
                         <outlet property="timerPicker" destination="GsD-Ri-7Hm" id="bQh-WO-iKW"/>
+                        <outlet property="timerTextField" destination="ueF-m7-hjj" id="4V7-Yy-3aS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eco-7j-ycd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -445,12 +458,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <relationships>
                 <relationship kind="action" name="cancelTimer:"/>
                 <relationship kind="action" name="pauseOrResumeTimer:"/>
+                <relationship kind="action" name="selectTimerTextField:"/>
                 <relationship kind="action" name="startTimer:"/>
                 <relationship kind="outlet" name="cancelButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="pauseButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="startButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="timerDisplay" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="timerPicker" candidateClass="UIDatePicker"/>
+                <relationship kind="outlet" name="timerTextField" candidateClass="UITextField"/>
             </relationships>
         </class>
     </classes>
