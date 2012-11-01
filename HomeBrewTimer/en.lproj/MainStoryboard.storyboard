@@ -61,35 +61,6 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background_image.png" translatesAutoresizingMaskIntoConstraints="NO" id="cyN-Jz-hyR"/>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="3600" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="GsD-Ri-7Hm">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="216" id="fAA-cw-d1p"/>
-                                </constraints>
-                                <date key="date" timeIntervalSinceReferenceDate="372097356.25903398">
-                                    <!--2012-10-16 16:22:36 +0000-->
-                                </date>
-                                <timeZone key="timeZone" name="America/Los_Angeles">
-                                    <data key="data">
-VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
-y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
-5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
-8n/BkPNvwKD0X6OQ9U+ioPY/hZD3L4Sg+CiiEPkPZqD6CIQQ+viDIPvoZhD82GUg/chIEP64RyD/qCoQ
-AJgpIAGIDBACeAsgA3EokARhJ6AFUQqQBkEJoAcw7JAHjUOgCRDOkAmtvyAK8LCQC+CvoAzZzRANwJGg
-DrmvEA+priAQmZEQEYmQIBJ5cxATaXIgFFlVEBVJVCAWOTcQFyk2IBgiU5AZCRggGgI1kBryNKAb4heQ
-HNIWoB3B+ZAesfigH6HbkCB2KyAhgb2QIlYNICNq2hAkNe8gJUq8ECYV0SAnKp4QJ/7toCkKgBAp3s+g
-KupiECu+saAs036QLZ6ToC6zYJAvfnWgMJNCkDFnkiAycySQM0d0IDRTBpA1J1YgNjLokDcHOCA4HAUQ
-OOcaIDn75xA6xvwgO9vJEDywGKA9u6sQPo/6oD+bjRBAb9ygQYSpkEJPvqBDZIuQRC+goEVEbZBF89Mg
-Ry2KEEfTtSBJDWwQSbOXIErtThBLnLOgTNZqkE18laBOtkyQT1x3oFCWLpBRPFmgUnYQkFMcO6BUVfKQ
-VPwdoFY11JBW5TogWB7xEFjFHCBZ/tMQWqT+IFvetRBchOAgXb6XEF5kwiBfnnkQYE3eoGGHlZBiLcCg
-Y2d3kGQNoqBlR1mQZe2EoGcnO5BnzWagaQcdkGmtSKBq5v+Qa5ZlIGzQHBBtdkcgbq/+EG9WKSBwj+AQ
-cTYLIHJvwhBzFe0gdE+kEHT/CaB2OMCQdt7roHgYopB4vs2gefiEkHqer6B72GaQfH6RoH24SJB+XnOg
-f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
-AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
-AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
-AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
-</data>
-                                </timeZone>
-                            </datePicker>
                             <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGT-qo-Hjr">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="81" id="gBD-43-cbr"/>
@@ -143,31 +114,27 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ueF-m7-hjj">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="275" id="5nh-d1-iJh"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="selectTimerTextField:" destination="42o-12-j7o" eventType="touchUpInside" id="sEu-zt-Fzx"/>
+                                    <action selector="selectTimerTextField:" destination="42o-12-j7o" eventType="touchDown" id="iJ8-5O-c8p"/>
                                 </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ueF-m7-hjj" firstAttribute="top" secondItem="kIZ-Gb-drt" secondAttribute="top" constant="249" id="1fu-sO-0Rh"/>
                             <constraint firstAttribute="bottom" secondItem="njf-nb-CKG" secondAttribute="bottom" constant="13" id="4NI-cp-uyy"/>
                             <constraint firstItem="njf-nb-CKG" firstAttribute="leading" secondItem="kIZ-Gb-drt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="5Wr-jO-ofO"/>
-                            <constraint firstItem="GsD-Ri-7Hm" firstAttribute="centerX" secondItem="AGT-qo-Hjr" secondAttribute="centerX" type="default" id="RRg-jw-uRS"/>
+                            <constraint firstAttribute="trailing" secondItem="ueF-m7-hjj" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="EQ7-NJ-KlY"/>
                             <constraint firstItem="cyN-Jz-hyR" firstAttribute="top" secondItem="kIZ-Gb-drt" secondAttribute="top" type="default" id="XA7-Yg-wbi"/>
                             <constraint firstItem="cyN-Jz-hyR" firstAttribute="leading" secondItem="kIZ-Gb-drt" secondAttribute="leading" type="default" id="XR8-3F-7Dn"/>
                             <constraint firstItem="ueF-m7-hjj" firstAttribute="leading" secondItem="kIZ-Gb-drt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="YAa-1Q-h7Q"/>
+                            <constraint firstAttribute="bottom" secondItem="AGT-qo-Hjr" secondAttribute="bottom" constant="97" id="Yh8-1Q-ldZ"/>
                             <constraint firstItem="AGT-qo-Hjr" firstAttribute="leading" secondItem="kIZ-Gb-drt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Zit-gJ-Hpt"/>
                             <constraint firstAttribute="trailing" secondItem="Ek4-3D-Ro3" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="adz-bT-ZAv"/>
                             <constraint firstAttribute="trailing" secondItem="AGT-qo-Hjr" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="eDL-JV-Na1"/>
+                            <constraint firstItem="ueF-m7-hjj" firstAttribute="top" secondItem="kIZ-Gb-drt" secondAttribute="top" constant="39" id="gz8-VR-jSb"/>
                             <constraint firstItem="cyN-Jz-hyR" firstAttribute="bottom" secondItem="kIZ-Gb-drt" secondAttribute="bottom" type="default" id="iI3-JP-fgM"/>
-                            <constraint firstItem="AGT-qo-Hjr" firstAttribute="top" secondItem="kIZ-Gb-drt" secondAttribute="top" constant="66" id="iQx-kY-LtR"/>
-                            <constraint firstItem="GsD-Ri-7Hm" firstAttribute="top" secondItem="kIZ-Gb-drt" secondAttribute="top" type="default" id="jWb-Mm-miW"/>
                             <constraint firstItem="bzw-Ed-0t0" firstAttribute="baseline" secondItem="Ek4-3D-Ro3" secondAttribute="baseline" type="default" id="lnm-o7-lTt"/>
                             <constraint firstItem="njf-nb-CKG" firstAttribute="baseline" secondItem="bzw-Ed-0t0" secondAttribute="baseline" type="default" id="tCU-dU-AZL"/>
                             <constraint firstAttribute="trailing" secondItem="bzw-Ed-0t0" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="xDq-4i-Ufj"/>
@@ -180,7 +147,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <outlet property="pauseButton" destination="njf-nb-CKG" id="5w9-KR-69s"/>
                         <outlet property="startButton" destination="bzw-Ed-0t0" id="6dC-ku-3Hb"/>
                         <outlet property="timerDisplay" destination="AGT-qo-Hjr" id="fsb-IH-kry"/>
-                        <outlet property="timerPicker" destination="GsD-Ri-7Hm" id="bQh-WO-iKW"/>
                         <outlet property="timerTextField" destination="ueF-m7-hjj" id="4V7-Yy-3aS"/>
                     </connections>
                 </viewController>

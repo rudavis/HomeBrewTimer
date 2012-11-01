@@ -10,7 +10,7 @@
 #import "ActionSheetPicker.h"
 
 @interface TimerViewController ()
-- (void) timerWasSelected:(NSDate *)selectedTime element:(id)element;
+
 @end
 
 @implementation TimerViewController
@@ -22,18 +22,57 @@
 @synthesize startButton = _startButton;
 @synthesize timerTextField = _timerTextField;
 @synthesize selectedDate = _selectedDate;
-@synthesize actionSheetPicker = _actionSheetPicker;
+@synthesize actionSheet = _actionSheet;
 
 - (IBAction)selectTimerTextField:(id)sender {
-    _actionSheetPicker = [[ActionSheetDatePicker alloc] initWithTitle:@"" datePickerMode:UIDatePickerModeDate selectedDate:self.selectedDate target:self action:@selector(timerWasSelected:element:) origin:sender];
-    self.actionSheetPicker.hideCancel = NO;
-    [self.actionSheetPicker showActionSheetPicker];
+    self.actionSheet = [[UIActionSheet alloc] initWithTitle:nil
+                                                   delegate:nil
+                                          cancelButtonTitle:nil
+                                     destructiveButtonTitle:nil
+                                          otherButtonTitles:nil];
+    
+    [self.actionSheet setActionSheetStyle:UIActionSheetStyleBlackTranslucent];
+    
+    UIDatePicker *theDatePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0.0, 44.0, 0, 0)];
+    theDatePicker.datePickerMode = UIDatePickerModeCountDownTimer;
+    
+    self.timerPicker = theDatePicker;
+    [theDatePicker release];
+    [self.timerPicker addTarget:self
+     //action:nil
+                      action:@selector(timerChanged:)
+            forControlEvents:UIControlEventValueChanged];
+    
+    UIToolbar *pickerDateToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
+    pickerDateToolbar.barStyle = UIBarStyleBlackOpaque;
+    [pickerDateToolbar sizeToFit];
+    
+    NSMutableArray *barItems = [[NSMutableArray alloc] init];
+    
+    UIBarButtonItem *flexSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
+    [barItems addObject:flexSpace];
+    
+    UIBarButtonItem *doneBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(DatePickerDoneClick)];
+    [barItems addObject:doneBtn];
+    
+    [pickerDateToolbar setItems:barItems animated:YES];
+    
+    [self.actionSheet addSubview:pickerDateToolbar];
+    [self.actionSheet addSubview:self.timerPicker];
+    [self.actionSheet showInView:self.view];
+    [self.actionSheet setBounds:CGRectMake(0, 0, 320, 464)];
 }
 
--(void) timerWasSelected:(NSDate *)selectedTime element:(id)element{
-    self.selectedDate = selectedTime;
+-(void) DatePickerDoneClick {
+    [self.actionSheet dismissWithClickedButtonIndex:0 animated:YES];
+    NSInteger min;
+    min = self.timerPicker.countDownDuration / 60;
+    [self.timerTextField setText:[NSString stringWithFormat:@"%2d minutes",min]];
+    
+}
 
-    self.timerTextField.text = [self.selectedDate description];
+-(void) timerChanged:(id)sender {
+    
 }
 
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
@@ -142,6 +181,8 @@
 	[UIView commitAnimations];
 }
 
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -154,7 +195,7 @@
 
 - (void)dealloc {
     self.selectedDate = nil;
-    self.actionSheetPicker = nil;
+    self.actionSheet = nil;
     [super dealloc];
 }
 

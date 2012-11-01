@@ -26,11 +26,12 @@
 @property (strong, nonatomic) IBOutlet UIButton *pauseButton;
 @property (strong, nonatomic) IBOutlet UIButton *cancelButton;
 @property (strong, nonatomic) IBOutlet UIButton *startButton;
-@property (nonatomic, retain) AbstractActionSheetPicker *actionSheetPicker;
+@property (nonatomic, retain) UIActionSheet *actionSheet;
 
 
 
 - (IBAction)selectTimerTextField:(id)sender;
+- (void)datePickerDoneClick;
 - (IBAction)startTimer:(id)sender;
 - (IBAction)cancelTimer:(id)sender;
 - (IBAction)pauseOrResumeTimer:(id)sender;
