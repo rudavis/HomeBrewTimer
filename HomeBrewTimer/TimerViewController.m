@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 RTB. All rights reserved.
 //
 
+
 #import "TimerViewController.h"
-#import "ActionSheetPicker.h"
 
 @interface TimerViewController ()
 
@@ -21,7 +21,6 @@
 @synthesize cancelButton = _cancelButton;
 @synthesize startButton = _startButton;
 @synthesize timerTextField = _timerTextField;
-@synthesize selectedDate = _selectedDate;
 @synthesize actionSheet = _actionSheet;
 
 - (IBAction)selectTimerTextField:(id)sender {
@@ -35,6 +34,7 @@
     
     UIDatePicker *theDatePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0.0, 44.0, 0, 0)];
     theDatePicker.datePickerMode = UIDatePickerModeCountDownTimer;
+    theDatePicker.countDownDuration = 3600;
     
     self.timerPicker = theDatePicker;
     [theDatePicker release];
@@ -49,8 +49,12 @@
     
     NSMutableArray *barItems = [[NSMutableArray alloc] init];
     
+    UIBarButtonItem *barTitle = [[UIBarButtonItem alloc] initWithTitle:@"Set Boil Length" style:UIBarButtonItemStylePlain target:self action:nil];
+    [barItems addObject:barTitle];
+    
     UIBarButtonItem *flexSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
     [barItems addObject:flexSpace];
+
     
     UIBarButtonItem *doneBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(DatePickerDoneClick)];
     [barItems addObject:doneBtn];
@@ -189,12 +193,11 @@
     secRemaining = 0;
     minRemaining = 0;
     timerRunning = NO;
-    
-    self.selectedDate = [NSDate date];
+
 }
 
 - (void)dealloc {
-    self.selectedDate = nil;
+    
     self.actionSheet = nil;
     [super dealloc];
 }

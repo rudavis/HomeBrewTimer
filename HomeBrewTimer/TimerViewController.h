@@ -20,7 +20,6 @@
 }
 
 @property (strong, nonatomic) IBOutlet UITextField *timerTextField;
-@property (strong, nonatomic) NSDate *selectedDate;
 @property (strong, nonatomic) IBOutlet UIDatePicker *timerPicker;
 @property (strong, nonatomic) IBOutlet UILabel *timerDisplay;
 @property (strong, nonatomic) IBOutlet UIButton *pauseButton;
