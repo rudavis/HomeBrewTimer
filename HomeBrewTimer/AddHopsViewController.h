@@ -19,8 +19,10 @@
 @interface AddHopsViewController : UIViewController{
     UITextField *hopName;
     UITextField *hopWeight;
+    UITextField *hopTimeTextField;
     UITextField *activeTxtField;
     UIView *inputAccView;
+    UISegmentedControl *segmentedControl;
     UIButton *btnDone;
     UIButton *btnNext;
     UIButton *btnPrev;
@@ -29,12 +31,14 @@
 @property (strong,nonatomic) id <AddHopsViewControllerDelegate> delegate;
 @property (retain, nonatomic) IBOutlet UITextField *hopName;
 @property (retain, nonatomic) IBOutlet UITextField *hopWeight;
+@property (retain, nonatomic) IBOutlet UITextField *hopTimeTextField;
 @property (nonatomic, retain) UITextField *activeTxtField;
 @property (retain, nonatomic) IBOutlet UIDatePicker *hopTime;
 @property (nonatomic, retain) UIView *inputAccView;
 @property (nonatomic, retain) UIButton *btnDone;
 @property (nonatomic, retain) UIButton *btnNext;
 @property (nonatomic, retain) UIButton *btnPrev;
+@property (nonatomic, retain) UISegmentedControl *segmentedControl;
 
 
 - (IBAction)done:(id)sender;

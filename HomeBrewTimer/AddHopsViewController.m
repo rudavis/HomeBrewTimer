@@ -17,12 +17,95 @@
 @synthesize delegate = _delegate;
 @synthesize hopName = _hopName;
 @synthesize hopWeight = _hopWeight;
+@synthesize hopTimeTextField = _hopTimeTextField;
 @synthesize inputAccView = _inputAccView;
 @synthesize btnDone = _btnDone;
 @synthesize btnNext = _btnNext;
 @synthesize btnPrev = _btnPrev;
 @synthesize activeTxtField = _activeTxtField;
+@synthesize segmentedControl = _segmentedControl;
 
+
+- (IBAction)done:(id)sender {
+    [self.delegate addHopsViewControllerDidSave:self];
+}
+
+- (IBAction)cancel:(id)sender {
+    [self.delegate addHopsViewControllerDidCancel:self];
+}
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField {
+    _activeTxtField = textField;
+    [self createInputAccessoryView];
+    [textField setInputAccessoryView:inputAccView];
+}
+
+- (void) createInputAccessoryView
+{
+    inputAccView = [[UIView alloc] initWithFrame:CGRectMake(10,0,310,42)];
+
+    UIToolbar *keyboardToolbar = [[[UIToolbar alloc] init] autorelease];
+    keyboardToolbar.barStyle = UIBarStyleBlackTranslucent;
+    [keyboardToolbar sizeToFit];
+    
+    _segmentedControl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Previous", @"Next", nil]];
+    [_segmentedControl setSegmentedControlStyle:UISegmentedControlStyleBar];
+    [_segmentedControl addTarget:self action:@selector(nextPrevious:) forControlEvents:UIControlEventValueChanged];
+    
+    UIBarButtonItem *nextPrevButton = [[UIBarButtonItem alloc] initWithCustomView:_segmentedControl];
+    
+    UIBarButtonItem *flexSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
+    
+    UIBarButtonItem *doneBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(resignKeyboard)];
+    
+    NSArray *barItems = [NSArray arrayWithObjects:nextPrevButton, flexSpace, doneBtn, nil];
+    [nextPrevButton release];
+    [flexSpace release];
+    [doneBtn release];
+    [keyboardToolbar setItems:barItems];
+    
+    [inputAccView addSubview:keyboardToolbar];
+    
+}
+
+- (void) nextPrevious:(id) sender
+{
+    switch(_activeTxtField.tag) {
+        case 1:
+            //Hop Name
+            if (_segmentedControl.selectedSegmentIndex == 1){
+                [_hopWeight becomeFirstResponder];
+                _activeTxtField = _hopWeight;
+            }
+            break;
+        case 2:
+            //Hop Weight
+            if (_segmentedControl.selectedSegmentIndex == 1){
+                [_hopTimeTextField becomeFirstResponder];
+                _activeTxtField = _hopTimeTextField;
+            }
+            else {
+                    [_hopName becomeFirstResponder];
+                    _activeTxtField = _hopName;
+            }
+            break;
+        case 3:
+            //Hop boil time
+            if (_segmentedControl.selectedSegmentIndex == 0){
+                [_hopWeight becomeFirstResponder];
+                _activeTxtField = _hopWeight;
+            }
+            break;
+        default:
+            break;
+    }
+}
+
+- (void) resignKeyboard
+{
+    [_activeTxtField resignFirstResponder];
+    [_activeTxtField release];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -50,62 +133,10 @@
     [_hopName release];
     [_hopWeight release];
     [_hopTime release];
+    [_hopTimeTextField release];
+    [_segmentedControl release];
     [super dealloc];
 }
-- (IBAction)done:(id)sender {
-    [self.delegate addHopsViewControllerDidSave:self];
-}
-
-- (IBAction)cancel:(id)sender {
-    [self.delegate addHopsViewControllerDidCancel:self];
-}
-
--(void)textFieldDidBeginEditing:(UITextField *)textField {
-    [self createInputAccessoryView];
-    activeTxtField = textField;
-    [textField setInputAccessoryView:inputAccView];
-}
-
-- (void) createInputAccessoryView
-{
-    inputAccView = [[UIView alloc] initWithFrame:CGRectMake(10,0,310,40)];
-
-    UIToolbar *keyboardToolbar = [[[UIToolbar alloc] init] autorelease];
-    keyboardToolbar.barStyle = UIBarStyleBlackTranslucent;
-    [keyboardToolbar sizeToFit];
-    
-    UISegmentedControl *segmentControl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Previous", @"Next", nil]];
-    [segmentControl setSegmentedControlStyle:UISegmentedControlStyleBar];
-    [segmentControl addTarget:self action:@selector(nextPrevious:) forControlEvents:UIControlEventValueChanged];
-    
-    UIBarButtonItem *nextPrevButton = [[UIBarButtonItem alloc] initWithCustomView:segmentControl];
-    
-    UIBarButtonItem *flexSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
-    
-    UIBarButtonItem *doneBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(resignKeyboard)];
-    
-    NSArray *barItems = [NSArray arrayWithObjects:nextPrevButton, flexSpace, doneBtn, nil];
-    [segmentControl release];
-    [nextPrevButton release];
-    [flexSpace release];
-    [doneBtn release];
-    [keyboardToolbar setItems:barItems];
-    
-    [inputAccView addSubview:keyboardToolbar];
-    
-}
-
-- (void) nextPrevious:(id) sender
-//TODO:  switch focus back and forth...
-{
-    
-}
-
-- (void) resignKeyboard
-{
-    [activeTxtField resignFirstResponder];
-}
-
 
 
 @end

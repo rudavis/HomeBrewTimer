@@ -185,18 +185,25 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background_image.png" translatesAutoresizingMaskIntoConstraints="NO" id="v6E-5e-m6i"/>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IpR-3e-VS1">
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IpR-3e-VS1">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="bg8-UY-EpE" id="KRl-g4-ZWc"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight (oz.)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FO4-l8-I8H">
+                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight (oz.)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FO4-l8-I8H">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="bg8-UY-EpE" id="Pmj-hy-isg"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Time to add hops" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TYl-2Q-XJE">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="bg8-UY-EpE" id="t2G-l5-TiG"/>
                                 </connections>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="2700" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="jXe-tR-gBd">
@@ -231,17 +238,20 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="jXe-tR-gBd" firstAttribute="leading" secondItem="pVO-MY-tf6" secondAttribute="leading" type="default" id="4jk-QY-h0y"/>
                             <constraint firstItem="v6E-5e-m6i" firstAttribute="bottom" secondItem="pVO-MY-tf6" secondAttribute="bottom" type="default" id="7oU-Yd-vNk"/>
+                            <constraint firstItem="jXe-tR-gBd" firstAttribute="leading" secondItem="pVO-MY-tf6" secondAttribute="leading" type="default" id="G4U-83-Pss"/>
                             <constraint firstItem="IpR-3e-VS1" firstAttribute="top" secondItem="pVO-MY-tf6" secondAttribute="top" constant="54" id="G7J-hr-7PP"/>
                             <constraint firstItem="jXe-tR-gBd" firstAttribute="bottom" secondItem="pVO-MY-tf6" secondAttribute="bottom" type="default" id="KcI-57-Asz"/>
                             <constraint firstItem="v6E-5e-m6i" firstAttribute="leading" secondItem="pVO-MY-tf6" secondAttribute="leading" type="default" id="PHv-Tn-uzi"/>
                             <constraint firstAttribute="trailing" secondItem="IpR-3e-VS1" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="VJ5-Tt-wcM"/>
+                            <constraint firstAttribute="trailing" secondItem="TYl-2Q-XJE" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="WLD-S3-bjZ"/>
                             <constraint firstItem="FO4-l8-I8H" firstAttribute="leading" secondItem="pVO-MY-tf6" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="YlM-Db-Ib3"/>
+                            <constraint firstItem="jXe-tR-gBd" firstAttribute="trailing" secondItem="pVO-MY-tf6" secondAttribute="trailing" type="default" id="eeR-At-Zlq"/>
+                            <constraint firstItem="TYl-2Q-XJE" firstAttribute="leading" secondItem="pVO-MY-tf6" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="iRf-yY-3ld"/>
                             <constraint firstItem="IpR-3e-VS1" firstAttribute="leading" secondItem="pVO-MY-tf6" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="met-Ec-F24"/>
+                            <constraint firstItem="TYl-2Q-XJE" firstAttribute="top" secondItem="FO4-l8-I8H" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="mia-un-gZw"/>
                             <constraint firstAttribute="trailing" secondItem="FO4-l8-I8H" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="qfL-2x-Qre"/>
                             <constraint firstItem="v6E-5e-m6i" firstAttribute="top" secondItem="pVO-MY-tf6" secondAttribute="top" type="default" id="sok-5v-DZJ"/>
-                            <constraint firstItem="jXe-tR-gBd" firstAttribute="trailing" secondItem="pVO-MY-tf6" secondAttribute="trailing" type="default" id="yXP-bu-vBR"/>
                             <constraint firstItem="FO4-l8-I8H" firstAttribute="top" secondItem="IpR-3e-VS1" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="zmB-mc-7ii"/>
                         </constraints>
                     </view>
@@ -260,6 +270,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <connections>
                         <outlet property="hopName" destination="IpR-3e-VS1" id="hha-Ni-nzG"/>
                         <outlet property="hopTime" destination="jXe-tR-gBd" id="YNw-Xn-3j0"/>
+                        <outlet property="hopTimeTextField" destination="TYl-2Q-XJE" id="EKQ-h2-g2q"/>
                         <outlet property="hopWeight" destination="FO4-l8-I8H" id="NUB-7E-d0Z"/>
                     </connections>
                 </viewController>
@@ -426,8 +437,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Seh-cy-GeY" kind="relationship" relationship="viewControllers" id="zps-2F-vz0"/>
                         <segue destination="hek-9V-TK7" kind="relationship" relationship="viewControllers" id="1FZ-75-tt7"/>
+                        <segue destination="Seh-cy-GeY" kind="relationship" relationship="viewControllers" id="zps-2F-vz0"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
@@ -545,6 +556,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <relationship kind="action" name="done:"/>
                 <relationship kind="outlet" name="hopName" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="hopTime" candidateClass="UIDatePicker"/>
+                <relationship kind="outlet" name="hopTimeTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="hopWeight" candidateClass="UITextField"/>
             </relationships>
         </class>

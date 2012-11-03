@@ -7,8 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "Recipe.h"
-#import "RecipesViewController.h"
+#import "TimerViewController.h"
+//#import "Recipe.h"
+//#import "RecipesViewController.h"
 
 @implementation AppDelegate {
     NSMutableArray *recipes;
@@ -17,7 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-
+/*
     recipes = [NSMutableArray arrayWithCapacity:20];
     Recipe *recipe = [[Recipe alloc] init];
     recipe.name = @"Best IPA";
@@ -36,12 +37,14 @@
     recipe.desc = @"Delicious and good for you";
     recipe.boilLength = 60;
     [recipes addObject:recipe];
-    
+
+ */
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
     UINavigationController *navigationController = [[tabBarController viewControllers] objectAtIndex:0];
+/*
     RecipesViewController *recipesViewController = [[navigationController viewControllers] objectAtIndex:0];
     recipesViewController.recipes = recipes;
- 
+ */
     
     return YES;
 }
