@@ -7,16 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddHopsViewController.h"
 
-@class AbstractActionSheetPicker;
-@interface TimerViewController : UIViewController <UITextFieldDelegate>
+@interface TimerViewController : UIViewController <UITextFieldDelegate, AddHopsViewControllerDelegate>
 {
     NSTimer *myTicker;
     NSInteger timerSec;
-    NSInteger timerSec2;
     NSInteger minRemaining;
     NSInteger secRemaining;
     BOOL timerRunning;
+
 }
 
 @property (strong, nonatomic) IBOutlet UITextField *timerTextField;

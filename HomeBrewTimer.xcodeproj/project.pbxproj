@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C70FE56A164483F200548F09 /* AddHopsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C70FE569164483F200548F09 /* AddHopsViewController.m */; };
 		C716EC40162E310B0056FB09 /* background_image.png in Resources */ = {isa = PBXBuildFile; fileRef = C716EC3F162E310B0056FB09 /* background_image.png */; };
 		C72806F71628CE9500D74727 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72806F61628CE9500D74727 /* UIKit.framework */; };
 		C72806F91628CE9500D74727 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72806F81628CE9500D74727 /* Foundation.framework */; };
@@ -32,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C70FE568164483F200548F09 /* AddHopsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddHopsViewController.h; sourceTree = "<group>"; };
+		C70FE569164483F200548F09 /* AddHopsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddHopsViewController.m; sourceTree = "<group>"; };
 		C716EC3F162E310B0056FB09 /* background_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_image.png; sourceTree = "<group>"; };
 		C72806F21628CE9500D74727 /* HomeBrewTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeBrewTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C72806F61628CE9500D74727 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -116,6 +119,8 @@
 				C72807051628CE9500D74727 /* AppDelegate.h */,
 				C72807061628CE9500D74727 /* AppDelegate.m */,
 				C728070E1628CE9500D74727 /* MainStoryboard.storyboard */,
+				C70FE568164483F200548F09 /* AddHopsViewController.h */,
+				C70FE569164483F200548F09 /* AddHopsViewController.m */,
 				C7B6C76C163C140600FF60DA /* Recipe */,
 				C72806FD1628CE9500D74727 /* Supporting Files */,
 			);
@@ -246,6 +251,7 @@
 				C7E5DB5D162DC7E200CF0F0D /* Timer.m in Sources */,
 				C7E5DB60162DC80B00CF0F0D /* TimerViewController.m in Sources */,
 				C7B6C769163C130E00FF60DA /* NSDate+TCUtils.m in Sources */,
+				C70FE56A164483F200548F09 /* AddHopsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

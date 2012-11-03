@@ -133,6 +133,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="tDu-7g-7Yh" kind="modal" identifier="AddHops" id="WlW-py-U1I"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -141,6 +144,7 @@
                             <constraint firstItem="bzw-Ed-0t0" firstAttribute="leading" secondItem="kIZ-Gb-drt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4sM-qh-trJ"/>
                             <constraint firstItem="njf-nb-CKG" firstAttribute="leading" secondItem="kIZ-Gb-drt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="5Wr-jO-ofO"/>
                             <constraint firstItem="njf-nb-CKG" firstAttribute="top" secondItem="bzw-Ed-0t0" secondAttribute="top" type="default" id="9yb-3t-WPk"/>
+                            <constraint firstItem="yMs-FG-jRR" firstAttribute="top" secondItem="kIZ-Gb-drt" secondAttribute="top" constant="38" id="HQf-tO-1Af"/>
                             <constraint firstAttribute="trailing" secondItem="yMs-FG-jRR" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Kyp-85-4tf"/>
                             <constraint firstItem="njf-nb-CKG" firstAttribute="bottom" secondItem="bzw-Ed-0t0" secondAttribute="bottom" type="default" id="Pz6-0Q-6pl"/>
                             <constraint firstAttribute="trailing" secondItem="bzw-Ed-0t0" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="WHh-OC-KUv"/>
@@ -155,7 +159,6 @@
                             <constraint firstItem="ueF-m7-hjj" firstAttribute="top" secondItem="kIZ-Gb-drt" secondAttribute="top" constant="39" id="gz8-VR-jSb"/>
                             <constraint firstItem="cyN-Jz-hyR" firstAttribute="bottom" secondItem="kIZ-Gb-drt" secondAttribute="bottom" type="default" id="iI3-JP-fgM"/>
                             <constraint firstAttribute="bottom" secondItem="AGT-qo-Hjr" secondAttribute="bottom" constant="158" id="lRh-wV-Myb"/>
-                            <constraint firstItem="yMs-FG-jRR" firstAttribute="top" secondItem="ueF-m7-hjj" secondAttribute="top" type="default" id="p9y-cQ-dKi"/>
                             <constraint firstItem="Ek4-3D-Ro3" firstAttribute="top" secondItem="njf-nb-CKG" secondAttribute="top" type="default" id="rsa-g3-UNk"/>
                             <constraint firstAttribute="bottom" secondItem="njf-nb-CKG" secondAttribute="bottom" constant="61" id="xBm-kD-wzx"/>
                         </constraints>
@@ -172,6 +175,97 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eco-7j-ycd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1050" y="524"/>
+        </scene>
+        <!--Add Hops View Controller - Add Hops-->
+        <scene sceneID="OKU-ji-SSt">
+            <objects>
+                <viewController id="bg8-UY-EpE" customClass="AddHopsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pVO-MY-tf6">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background_image.png" translatesAutoresizingMaskIntoConstraints="NO" id="v6E-5e-m6i"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IpR-3e-VS1">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="bg8-UY-EpE" id="KRl-g4-ZWc"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight (oz.)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FO4-l8-I8H">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="bg8-UY-EpE" id="Pmj-hy-isg"/>
+                                </connections>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="2700" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="jXe-tR-gBd">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="dQC-nA-WJd"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="373592410.30585003">
+                                    <!--2012-11-02 23:40:10 +0000-->
+                                </date>
+                                <timeZone key="timeZone" name="America/Los_Angeles">
+                                    <data key="data">
+VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
+y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
+5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
+8n/BkPNvwKD0X6OQ9U+ioPY/hZD3L4Sg+CiiEPkPZqD6CIQQ+viDIPvoZhD82GUg/chIEP64RyD/qCoQ
+AJgpIAGIDBACeAsgA3EokARhJ6AFUQqQBkEJoAcw7JAHjUOgCRDOkAmtvyAK8LCQC+CvoAzZzRANwJGg
+DrmvEA+priAQmZEQEYmQIBJ5cxATaXIgFFlVEBVJVCAWOTcQFyk2IBgiU5AZCRggGgI1kBryNKAb4heQ
+HNIWoB3B+ZAesfigH6HbkCB2KyAhgb2QIlYNICNq2hAkNe8gJUq8ECYV0SAnKp4QJ/7toCkKgBAp3s+g
+KupiECu+saAs036QLZ6ToC6zYJAvfnWgMJNCkDFnkiAycySQM0d0IDRTBpA1J1YgNjLokDcHOCA4HAUQ
+OOcaIDn75xA6xvwgO9vJEDywGKA9u6sQPo/6oD+bjRBAb9ygQYSpkEJPvqBDZIuQRC+goEVEbZBF89Mg
+Ry2KEEfTtSBJDWwQSbOXIErtThBLnLOgTNZqkE18laBOtkyQT1x3oFCWLpBRPFmgUnYQkFMcO6BUVfKQ
+VPwdoFY11JBW5TogWB7xEFjFHCBZ/tMQWqT+IFvetRBchOAgXb6XEF5kwiBfnnkQYE3eoGGHlZBiLcCg
+Y2d3kGQNoqBlR1mQZe2EoGcnO5BnzWagaQcdkGmtSKBq5v+Qa5ZlIGzQHBBtdkcgbq/+EG9WKSBwj+AQ
+cTYLIHJvwhBzFe0gdE+kEHT/CaB2OMCQdt7roHgYopB4vs2gefiEkHqer6B72GaQfH6RoH24SJB+XnOg
+f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
+</data>
+                                </timeZone>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jXe-tR-gBd" firstAttribute="leading" secondItem="pVO-MY-tf6" secondAttribute="leading" type="default" id="4jk-QY-h0y"/>
+                            <constraint firstItem="v6E-5e-m6i" firstAttribute="bottom" secondItem="pVO-MY-tf6" secondAttribute="bottom" type="default" id="7oU-Yd-vNk"/>
+                            <constraint firstItem="IpR-3e-VS1" firstAttribute="top" secondItem="pVO-MY-tf6" secondAttribute="top" constant="54" id="G7J-hr-7PP"/>
+                            <constraint firstItem="jXe-tR-gBd" firstAttribute="bottom" secondItem="pVO-MY-tf6" secondAttribute="bottom" type="default" id="KcI-57-Asz"/>
+                            <constraint firstItem="v6E-5e-m6i" firstAttribute="leading" secondItem="pVO-MY-tf6" secondAttribute="leading" type="default" id="PHv-Tn-uzi"/>
+                            <constraint firstAttribute="trailing" secondItem="IpR-3e-VS1" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="VJ5-Tt-wcM"/>
+                            <constraint firstItem="FO4-l8-I8H" firstAttribute="leading" secondItem="pVO-MY-tf6" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="YlM-Db-Ib3"/>
+                            <constraint firstItem="IpR-3e-VS1" firstAttribute="leading" secondItem="pVO-MY-tf6" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="met-Ec-F24"/>
+                            <constraint firstAttribute="trailing" secondItem="FO4-l8-I8H" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="qfL-2x-Qre"/>
+                            <constraint firstItem="v6E-5e-m6i" firstAttribute="top" secondItem="pVO-MY-tf6" secondAttribute="top" type="default" id="sok-5v-DZJ"/>
+                            <constraint firstItem="jXe-tR-gBd" firstAttribute="trailing" secondItem="pVO-MY-tf6" secondAttribute="trailing" type="default" id="yXP-bu-vBR"/>
+                            <constraint firstItem="FO4-l8-I8H" firstAttribute="top" secondItem="IpR-3e-VS1" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="zmB-mc-7ii"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Hops" id="8sZ-nq-95g">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="RNo-sA-cHm">
+                            <connections>
+                                <action selector="cancel:" destination="bg8-UY-EpE" id="8CB-xE-9bE"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="LQh-do-a5q">
+                            <connections>
+                                <action selector="done:" destination="bg8-UY-EpE" id="aFs-BD-hAL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="hopName" destination="IpR-3e-VS1" id="hha-Ni-nzG"/>
+                        <outlet property="hopTime" destination="jXe-tR-gBd" id="YNw-Xn-3j0"/>
+                        <outlet property="hopWeight" destination="FO4-l8-I8H" id="NUB-7E-d0Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6bK-sG-jnC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2049" y="517"/>
         </scene>
         <!--Recipe Detail View Controller - Add Recipe-->
         <scene sceneID="ec6-IM-9nC">
@@ -418,6 +512,24 @@
             </objects>
             <point key="canvasLocation" x="653" y="519"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ecm-YG-S0C">
+            <objects>
+                <navigationController id="tDu-7g-7Yh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3u8-O3-JaA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bg8-UY-EpE" kind="relationship" relationship="rootViewController" id="al2-RU-gMx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6M3-YK-NDM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1523" y="517"/>
+        </scene>
     </scenes>
     <resources>
         <image name="background_image.png" width="320" height="480"/>
@@ -426,6 +538,16 @@
         <image name="red_btn.png" width="146" height="60"/>
     </resources>
     <classes>
+        <class className="AddHopsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddHopsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="done:"/>
+                <relationship kind="outlet" name="hopName" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="hopTime" candidateClass="UIDatePicker"/>
+                <relationship kind="outlet" name="hopWeight" candidateClass="UITextField"/>
+            </relationships>
+        </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>

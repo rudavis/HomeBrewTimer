@@ -185,6 +185,25 @@
 	[UIView commitAnimations];
 }
 
+- (void)addHopsViewControllerDidSave:(AddHopsViewController *)controller
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)addHopsViewControllerDidCancel:(AddHopsViewController *)controller
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+	if ([segue.identifier isEqualToString:@"AddHops"])
+	{
+		UINavigationController *navigationController = segue.destinationViewController;
+		AddHopsViewController* addHopsViewController = [[navigationController viewControllers]objectAtIndex:0];
+		addHopsViewController.delegate = self;
+	}
+}
 
 
 - (void)viewDidLoad
