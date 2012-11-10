@@ -25,7 +25,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *pauseButton;
 @property (strong, nonatomic) IBOutlet UIButton *cancelButton;
 @property (strong, nonatomic) IBOutlet UIButton *startButton;
-@property (nonatomic, retain) UIActionSheet *actionSheet;
+@property (nonatomic, strong) UIActionSheet *actionSheet;
 
 
 

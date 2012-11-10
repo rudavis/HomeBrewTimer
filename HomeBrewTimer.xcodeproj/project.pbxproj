@@ -23,6 +23,7 @@
 		C73031BC162F6FAB002C744A /* stopwatch.png in Resources */ = {isa = PBXBuildFile; fileRef = C73031BB162F6FAB002C744A /* stopwatch.png */; };
 		C739EAC116290855000E95CB /* RecipesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C739EAC016290855000E95CB /* RecipesViewController.m */; };
 		C739EAC5162908BB000E95CB /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = C739EAC4162908BB000E95CB /* Recipe.m */; };
+		C7A2DF27164F15E700958672 /* HopListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A2DF26164F15E700958672 /* HopListViewController.m */; };
 		C7B5BDC71629B5AA002949B4 /* RecipeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B5BDC61629B5AA002949B4 /* RecipeDetailViewController.m */; };
 		C7B6C769163C130E00FF60DA /* NSDate+TCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B6C768163C130E00FF60DA /* NSDate+TCUtils.m */; };
 		C7E5DB5D162DC7E200CF0F0D /* Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E5DB5C162DC7E200CF0F0D /* Timer.m */; };
@@ -57,6 +58,8 @@
 		C739EAC016290855000E95CB /* RecipesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipesViewController.m; sourceTree = "<group>"; };
 		C739EAC3162908BB000E95CB /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
 		C739EAC4162908BB000E95CB /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipe.m; sourceTree = "<group>"; };
+		C7A2DF25164F15E700958672 /* HopListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HopListViewController.h; sourceTree = "<group>"; };
+		C7A2DF26164F15E700958672 /* HopListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HopListViewController.m; sourceTree = "<group>"; };
 		C7B5BDC51629B5AA002949B4 /* RecipeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeDetailViewController.h; sourceTree = "<group>"; };
 		C7B5BDC61629B5AA002949B4 /* RecipeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeDetailViewController.m; sourceTree = "<group>"; };
 		C7B6C767163C130E00FF60DA /* NSDate+TCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TCUtils.h"; sourceTree = "<group>"; };
@@ -166,10 +169,12 @@
 		C7B6C76C163C140600FF60DA /* Recipe */ = {
 			isa = PBXGroup;
 			children = (
-				C7B5BDC51629B5AA002949B4 /* RecipeDetailViewController.h */,
-				C7B5BDC61629B5AA002949B4 /* RecipeDetailViewController.m */,
 				C739EABF16290855000E95CB /* RecipesViewController.h */,
 				C739EAC016290855000E95CB /* RecipesViewController.m */,
+				C7B5BDC51629B5AA002949B4 /* RecipeDetailViewController.h */,
+				C7B5BDC61629B5AA002949B4 /* RecipeDetailViewController.m */,
+				C7A2DF25164F15E700958672 /* HopListViewController.h */,
+				C7A2DF26164F15E700958672 /* HopListViewController.m */,
 			);
 			name = Recipe;
 			sourceTree = "<group>";
@@ -256,6 +261,7 @@
 				C7E5DB60162DC80B00CF0F0D /* TimerViewController.m in Sources */,
 				C7B6C769163C130E00FF60DA /* NSDate+TCUtils.m in Sources */,
 				C70FE56A164483F200548F09 /* AddHopsViewController.m in Sources */,
+				C7A2DF27164F15E700958672 /* HopListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,10 +340,12 @@
 		C72807221628CE9500D74727 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HomeBrewTimer/HomeBrewTimer-Prefix.pch";
 				INFOPLIST_FILE = "HomeBrewTimer/HomeBrewTimer-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -345,10 +353,12 @@
 		C72807231628CE9500D74727 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HomeBrewTimer/HomeBrewTimer-Prefix.pch";
 				INFOPLIST_FILE = "HomeBrewTimer/HomeBrewTimer-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

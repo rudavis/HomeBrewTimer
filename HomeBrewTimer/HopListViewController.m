@@ -1,21 +1,18 @@
 //
-//  RecipesViewController.m
+//  HopListViewController.m
 //  HomeBrewTimer
 //
-//  Created by Russ Davis on 10/12/12.
+//  Created by Russ Davis on 11/10/12.
 //  Copyright (c) 2012 RTB. All rights reserved.
 //
 
-#import "RecipesViewController.h"
-#import "Recipe.h"
+#import "HopListViewController.h"
 
-@interface RecipesViewController ()
+@interface HopListViewController ()
 
 @end
 
-@implementation RecipesViewController
-
-@synthesize recipes = _recipes;
+@implementation HopListViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -35,14 +32,6 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    _recipes = [NSMutableArray arrayWithCapacity:20];
-    Recipe *recipe = [[Recipe alloc] init];
-    recipe.name = @"Best IPA";
-    recipe.desc = @"Name says it all";
-    recipe.boilLength = 60;
-    [_recipes addObject:recipe];
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,43 +44,26 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 1;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.recipes count];
+#warning Incomplete method implementation.
+    // Return the number of rows in the section.
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RecipeCell"];
-    Recipe *recipe = [self.recipes objectAtIndex:indexPath.row];
-    cell.textLabel.text = recipe.name;
-    cell.detailTextLabel.text = recipe.desc;
-
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    // Configure the cell...
+    
     return cell;
-}
-
-- (void) recipeDetailViewControllerDidCancel:(RecipeDetailViewController *)controller {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
--(void) recipeDetailViewController:(RecipeDetailViewController *)controller didAddRecipe:(Recipe *)recipe {
-    [self.recipes addObject:recipe];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[self.recipes count] -1 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"AddRecipe"]) {
-        UINavigationController *navigationController = segue.destinationViewController;
-        RecipeDetailViewController *recipeDetailViewController = [[navigationController viewControllers] objectAtIndex:0];
-        recipeDetailViewController.delegate = self;
-    }
 }
 
 /*
@@ -146,4 +118,7 @@
      */
 }
 
+- (IBAction)cancel:(id)sender {
+    [self.delegate hopListViewControllerDidCancel:self];
+}
 @end

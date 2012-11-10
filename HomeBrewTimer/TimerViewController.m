@@ -37,7 +37,6 @@
     theDatePicker.countDownDuration = 3600;
     
     self.timerPicker = theDatePicker;
-    [theDatePicker release];
     [self.timerPicker addTarget:self
      //action:nil
                       action:@selector(timerChanged:)
@@ -215,11 +214,6 @@
 
 }
 
-- (void)dealloc {
-    
-    self.actionSheet = nil;
-    [super dealloc];
-}
 
 - (void)didReceiveMemoryWarning
 {

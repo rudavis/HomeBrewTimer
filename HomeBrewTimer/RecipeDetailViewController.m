@@ -59,4 +59,19 @@
 - (IBAction)cancel:(id)sender {
     [self.delegate recipeDetailViewControllerDidCancel:self];
 }
+
+- (void) hopListViewControllerDidCancel:(HopListViewController *)controller {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"HopList"]) {
+        UINavigationController *navigationController = segue.destinationViewController;
+        HopListViewController *hopListViewController = [[navigationController viewControllers] objectAtIndex:0];
+        hopListViewController.delegate = self;
+    }
+}
+
+
 @end

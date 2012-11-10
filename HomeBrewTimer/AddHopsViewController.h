@@ -29,16 +29,16 @@
 }
 
 @property (strong,nonatomic) id <AddHopsViewControllerDelegate> delegate;
-@property (retain, nonatomic) IBOutlet UITextField *hopName;
-@property (retain, nonatomic) IBOutlet UITextField *hopWeight;
-@property (retain, nonatomic) IBOutlet UITextField *hopTimeTextField;
-@property (nonatomic, retain) UITextField *activeTxtField;
-@property (retain, nonatomic) IBOutlet UIDatePicker *hopTime;
-@property (nonatomic, retain) UIView *inputAccView;
-@property (nonatomic, retain) UIButton *btnDone;
-@property (nonatomic, retain) UIButton *btnNext;
-@property (nonatomic, retain) UIButton *btnPrev;
-@property (nonatomic, retain) UISegmentedControl *segmentedControl;
+@property (strong, nonatomic) IBOutlet UITextField *hopName;
+@property (strong, nonatomic) IBOutlet UITextField *hopWeight;
+@property (strong, nonatomic) IBOutlet UITextField *hopTimeTextField;
+@property (nonatomic, strong) UITextField *activeTxtField;
+@property (strong, nonatomic) IBOutlet UIDatePicker *hopTime;
+@property (nonatomic, strong) UIView *inputAccView;
+@property (nonatomic, strong) UIButton *btnDone;
+@property (nonatomic, strong) UIButton *btnNext;
+@property (nonatomic, strong) UIButton *btnPrev;
+@property (nonatomic, strong) UISegmentedControl *segmentedControl;
 
 
 - (IBAction)done:(id)sender;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C3006" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
@@ -364,7 +364,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
-                                            <segue destination="SDt-Wd-tMB" kind="modal" id="Voz-1K-Ofs"/>
+                                            <segue destination="SDt-Wd-tMB" kind="modal" identifier="HopList" id="Voz-1K-Ofs"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -396,10 +396,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="2045" y="-151"/>
         </scene>
-        <!--Table View Controller - Add Hops-->
+        <!--Hop List View Controller - Hop List-->
         <scene sceneID="gT1-Ye-FX1">
             <objects>
-                <tableViewController id="Zee-zS-l8H" sceneMemberID="viewController">
+                <tableViewController id="Zee-zS-l8H" customClass="HopListViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="BqL-Yl-KVG">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -420,7 +420,13 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <outlet property="delegate" destination="Zee-zS-l8H" id="Tee-1B-7UV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Add Hops" id="s9T-Ij-Gcf"/>
+                    <navigationItem key="navigationItem" title="Hop List" id="s9T-Ij-Gcf">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="LUe-Xo-F4E">
+                            <connections>
+                                <action selector="cancel:" destination="Zee-zS-l8H" id="tvH-9l-MJC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Vr-0g-zi9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -558,6 +564,12 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <relationship kind="outlet" name="hopTime" candidateClass="UIDatePicker"/>
                 <relationship kind="outlet" name="hopTimeTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="hopWeight" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="HopListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HopListViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
             </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">

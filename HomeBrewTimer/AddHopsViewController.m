@@ -44,7 +44,7 @@
 {
     inputAccView = [[UIView alloc] initWithFrame:CGRectMake(10,0,310,42)];
 
-    UIToolbar *keyboardToolbar = [[[UIToolbar alloc] init] autorelease];
+    UIToolbar *keyboardToolbar = [[UIToolbar alloc] init];
     keyboardToolbar.barStyle = UIBarStyleBlackTranslucent;
     [keyboardToolbar sizeToFit];
     
@@ -59,9 +59,6 @@
     UIBarButtonItem *doneBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(resignKeyboard)];
     
     NSArray *barItems = [NSArray arrayWithObjects:nextPrevButton, flexSpace, doneBtn, nil];
-    [nextPrevButton release];
-    [flexSpace release];
-    [doneBtn release];
     [keyboardToolbar setItems:barItems];
     
     [inputAccView addSubview:keyboardToolbar];
@@ -104,7 +101,6 @@
 - (void) resignKeyboard
 {
     [_activeTxtField resignFirstResponder];
-    [_activeTxtField release];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -129,14 +125,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)dealloc {
-    [_hopName release];
-    [_hopWeight release];
-    [_hopTime release];
-    [_hopTimeTextField release];
-    [_segmentedControl release];
-    [super dealloc];
-}
 
 
 @end

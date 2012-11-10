@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Recipe.h"
+#import "HopListViewController.h"
 
 @class RecipeDetailViewController;
 
@@ -17,7 +18,7 @@
 @end
 
 
-@interface RecipeDetailViewController : UITableViewController
+@interface RecipeDetailViewController : UITableViewController <HopListViewControllerDelegate>
 
 @property (strong,nonatomic) id <RecipeDetailViewControllerDelegate> delegate;
 @property (strong, nonatomic) IBOutlet UITextField *nameTextField;
