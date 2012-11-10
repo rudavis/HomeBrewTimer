@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C70FE56A164483F200548F09 /* AddHopsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C70FE569164483F200548F09 /* AddHopsViewController.m */; };
 		C716EC40162E310B0056FB09 /* background_image.png in Resources */ = {isa = PBXBuildFile; fileRef = C716EC3F162E310B0056FB09 /* background_image.png */; };
+		C71E264A164DD6FB00573B05 /* hops.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C71E2649164DD6FB00573B05 /* hops.jpg */; };
 		C72806F71628CE9500D74727 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72806F61628CE9500D74727 /* UIKit.framework */; };
 		C72806F91628CE9500D74727 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72806F81628CE9500D74727 /* Foundation.framework */; };
 		C72806FB1628CE9500D74727 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72806FA1628CE9500D74727 /* CoreGraphics.framework */; };
@@ -36,6 +37,7 @@
 		C70FE568164483F200548F09 /* AddHopsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddHopsViewController.h; sourceTree = "<group>"; };
 		C70FE569164483F200548F09 /* AddHopsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddHopsViewController.m; sourceTree = "<group>"; };
 		C716EC3F162E310B0056FB09 /* background_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_image.png; sourceTree = "<group>"; };
+		C71E2649164DD6FB00573B05 /* hops.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hops.jpg; sourceTree = "<group>"; };
 		C72806F21628CE9500D74727 /* HomeBrewTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeBrewTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C72806F61628CE9500D74727 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C72806F81628CE9500D74727 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -130,6 +132,7 @@
 		C72806FD1628CE9500D74727 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C71E2649164DD6FB00573B05 /* hops.jpg */,
 				C7F7166F1643DB7C00DCAB78 /* green_btn.png */,
 				C7F716761643DC6600DCAB78 /* gray_btn.png */,
 				C7F716701643DB7C00DCAB78 /* red_btn.png */,
@@ -233,6 +236,7 @@
 				C7F716731643DB7C00DCAB78 /* red_btn.png in Resources */,
 				C7F716741643DB7C00DCAB78 /* black_btn.png in Resources */,
 				C7F716771643DC6600DCAB78 /* gray_btn.png in Resources */,
+				C71E264A164DD6FB00573B05 /* hops.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
