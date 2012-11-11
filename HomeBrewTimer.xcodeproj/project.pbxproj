@@ -26,6 +26,7 @@
 		C7A2DF27164F15E700958672 /* HopListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A2DF26164F15E700958672 /* HopListViewController.m */; };
 		C7B5BDC71629B5AA002949B4 /* RecipeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B5BDC61629B5AA002949B4 /* RecipeDetailViewController.m */; };
 		C7B6C769163C130E00FF60DA /* NSDate+TCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B6C768163C130E00FF60DA /* NSDate+TCUtils.m */; };
+		C7D38FAD164F1A8400ADE1B2 /* small_hops.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C7D38FAC164F1A8400ADE1B2 /* small_hops.jpg */; };
 		C7E5DB5D162DC7E200CF0F0D /* Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E5DB5C162DC7E200CF0F0D /* Timer.m */; };
 		C7E5DB60162DC80B00CF0F0D /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E5DB5F162DC80B00CF0F0D /* TimerViewController.m */; };
 		C7F716721643DB7C00DCAB78 /* green_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F7166F1643DB7C00DCAB78 /* green_btn.png */; };
@@ -64,6 +65,7 @@
 		C7B5BDC61629B5AA002949B4 /* RecipeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeDetailViewController.m; sourceTree = "<group>"; };
 		C7B6C767163C130E00FF60DA /* NSDate+TCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TCUtils.h"; sourceTree = "<group>"; };
 		C7B6C768163C130E00FF60DA /* NSDate+TCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TCUtils.m"; sourceTree = "<group>"; };
+		C7D38FAC164F1A8400ADE1B2 /* small_hops.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = small_hops.jpg; sourceTree = "<group>"; };
 		C7E5DB5B162DC7E200CF0F0D /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
 		C7E5DB5C162DC7E200CF0F0D /* Timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timer.m; sourceTree = "<group>"; };
 		C7E5DB5E162DC80B00CF0F0D /* TimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 		C72806FD1628CE9500D74727 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C7D38FAC164F1A8400ADE1B2 /* small_hops.jpg */,
 				C71E2649164DD6FB00573B05 /* hops.jpg */,
 				C7F7166F1643DB7C00DCAB78 /* green_btn.png */,
 				C7F716761643DC6600DCAB78 /* gray_btn.png */,
@@ -242,6 +245,7 @@
 				C7F716741643DB7C00DCAB78 /* black_btn.png in Resources */,
 				C7F716771643DC6600DCAB78 /* gray_btn.png in Resources */,
 				C71E264A164DD6FB00573B05 /* hops.jpg in Resources */,
+				C7D38FAD164F1A8400ADE1B2 /* small_hops.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

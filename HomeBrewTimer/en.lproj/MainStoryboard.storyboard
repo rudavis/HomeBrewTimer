@@ -43,7 +43,7 @@
                     <navigationItem key="navigationItem" title="Recipes" id="R9W-zO-7DO">
                         <barButtonItem key="rightBarButtonItem" title="+" id="92z-5V-8A0">
                             <connections>
-                                <segue destination="dpN-QP-Cgc" kind="modal" identifier="AddRecipe" modalTransitionStyle="flipHorizontal" id="aw2-Bb-oGf"/>
+                                <segue destination="dpN-QP-Cgc" kind="modal" identifier="AddRecipe" modalTransitionStyle="coverVertical" id="aw2-Bb-oGf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -122,11 +122,11 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMs-FG-jRR">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="Cko-0D-NZu"/>
-                                    <constraint firstAttribute="width" constant="130" id="sPr-b3-sD7"/>
+                                    <constraint firstAttribute="width" constant="100" id="AH0-9h-uRK"/>
+                                    <constraint firstAttribute="height" constant="139" id="Pml-O9-ma7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Add Hops">
+                                <state key="normal" title="Add Hops" backgroundImage="small_hops.jpg">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -140,13 +140,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="yMs-FG-jRR" firstAttribute="leading" secondItem="Ek4-3D-Ro3" secondAttribute="leading" type="default" id="1II-Gh-iNk"/>
                             <constraint firstItem="bzw-Ed-0t0" firstAttribute="leading" secondItem="kIZ-Gb-drt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4sM-qh-trJ"/>
                             <constraint firstItem="njf-nb-CKG" firstAttribute="leading" secondItem="kIZ-Gb-drt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="5Wr-jO-ofO"/>
                             <constraint firstItem="njf-nb-CKG" firstAttribute="top" secondItem="bzw-Ed-0t0" secondAttribute="top" type="default" id="9yb-3t-WPk"/>
-                            <constraint firstItem="yMs-FG-jRR" firstAttribute="top" secondItem="kIZ-Gb-drt" secondAttribute="top" constant="38" id="HQf-tO-1Af"/>
-                            <constraint firstAttribute="trailing" secondItem="yMs-FG-jRR" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Kyp-85-4tf"/>
+                            <constraint firstItem="ueF-m7-hjj" firstAttribute="baseline" secondItem="yMs-FG-jRR" secondAttribute="baseline" type="default" id="Aij-zK-Ekm"/>
+                            <constraint firstItem="yMs-FG-jRR" firstAttribute="leading" secondItem="kIZ-Gb-drt" secondAttribute="leading" constant="185" id="Dj2-GY-hNf"/>
                             <constraint firstItem="njf-nb-CKG" firstAttribute="bottom" secondItem="bzw-Ed-0t0" secondAttribute="bottom" type="default" id="Pz6-0Q-6pl"/>
+                            <constraint firstItem="yMs-FG-jRR" firstAttribute="centerX" secondItem="Ek4-3D-Ro3" secondAttribute="centerX" type="default" id="RLU-sh-G0i"/>
+                            <constraint firstItem="yMs-FG-jRR" firstAttribute="top" secondItem="kIZ-Gb-drt" secondAttribute="top" constant="20" symbolic="YES" type="default" id="U73-L2-WqK"/>
                             <constraint firstAttribute="trailing" secondItem="bzw-Ed-0t0" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="WHh-OC-KUv"/>
                             <constraint firstItem="Ek4-3D-Ro3" firstAttribute="bottom" secondItem="bzw-Ed-0t0" secondAttribute="bottom" type="default" id="WVO-01-OGM"/>
                             <constraint firstItem="cyN-Jz-hyR" firstAttribute="top" secondItem="kIZ-Gb-drt" secondAttribute="top" type="default" id="XA7-Yg-wbi"/>
@@ -156,7 +157,6 @@
                             <constraint firstAttribute="trailing" secondItem="Ek4-3D-Ro3" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="adz-bT-ZAv"/>
                             <constraint firstItem="ueF-m7-hjj" firstAttribute="trailing" secondItem="njf-nb-CKG" secondAttribute="trailing" type="default" id="bi1-ZE-Irq"/>
                             <constraint firstAttribute="trailing" secondItem="AGT-qo-Hjr" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="eDL-JV-Na1"/>
-                            <constraint firstItem="ueF-m7-hjj" firstAttribute="top" secondItem="kIZ-Gb-drt" secondAttribute="top" constant="39" id="gz8-VR-jSb"/>
                             <constraint firstItem="cyN-Jz-hyR" firstAttribute="bottom" secondItem="kIZ-Gb-drt" secondAttribute="bottom" type="default" id="iI3-JP-fgM"/>
                             <constraint firstAttribute="bottom" secondItem="AGT-qo-Hjr" secondAttribute="bottom" constant="158" id="lRh-wV-Myb"/>
                             <constraint firstItem="Ek4-3D-Ro3" firstAttribute="top" secondItem="njf-nb-CKG" secondAttribute="top" type="default" id="rsa-g3-UNk"/>
@@ -285,23 +285,26 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="wsi-oQ-1CT">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <sections>
-                            <tableViewSection headerTitle="Recipe Name" id="Qu5-AM-JV0">
+                            <tableViewSection headerTitle="Recipe" id="Qu5-AM-JV0">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddRecipeCell" id="nSp-n9-VkP">
-                                        <rect key="frame" x="0.0" y="46" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="46" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DhL-0U-Nty">
+                                                <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Recipe Name" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DhL-0U-Nty">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="43" id="jBk-g6-Yga"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="qRG-bj-ZP4" id="zBC-I4-xKs"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -312,39 +315,75 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                             <constraint firstAttribute="trailing" secondItem="DhL-0U-Nty" secondAttribute="trailing" constant="20" type="default" id="whF-py-NvU"/>
                                         </constraints>
                                     </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="Boil Length" id="Lvq-eC-KdH">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="LWS-V9-X2G">
-                                        <rect key="frame" x="0.0" y="138" width="320" height="46"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddRecipeCell" id="z5C-xX-GsL">
+                                        <rect key="frame" x="0.0" y="91" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hrf-Kl-jcB">
+                                                <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Description" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Blc-oN-3QE">
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="43" id="I7a-Ig-KZ9"/>
+                                                        <constraint firstAttribute="height" constant="43" id="73C-BN-vvo"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="qRG-bj-ZP4" id="t3C-Nn-B5H"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="hrf-Kl-jcB" secondAttribute="trailing" constant="20" type="default" id="GE5-Mg-kO6"/>
-                                            <constraint firstItem="hrf-Kl-jcB" firstAttribute="top" secondItem="LWS-V9-X2G" secondAttribute="top" constant="1" id="jVU-bq-ZSe"/>
-                                            <constraint firstItem="hrf-Kl-jcB" firstAttribute="leading" secondItem="LWS-V9-X2G" secondAttribute="leading" constant="20" type="default" id="wpd-8e-UsB"/>
+                                            <constraint firstAttribute="trailing" secondItem="Blc-oN-3QE" secondAttribute="trailing" constant="20" type="default" id="02d-7U-3nR"/>
+                                            <constraint firstItem="Blc-oN-3QE" firstAttribute="leading" secondItem="z5C-xX-GsL" secondAttribute="leading" constant="20" type="default" id="9H0-ob-3wV"/>
+                                            <constraint firstItem="Blc-oN-3QE" firstAttribute="top" secondItem="z5C-xX-GsL" secondAttribute="top" type="default" id="aaQ-Qr-YQ5"/>
                                         </constraints>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection id="o0H-Js-CIW">
+                            <tableViewSection headerTitle="Boil Length" id="Lvq-eC-KdH">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="LWS-V9-X2G">
+                                        <rect key="frame" x="0.0" y="182" width="320" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bu-mC-Riy">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="DQv-j5-Aw6"/>
+                                                        <constraint firstAttribute="width" constant="300" id="Fon-hZ-dHk"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <state key="normal" title="Set Boil Length">
+                                                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="touchBoilLengthTextField:" destination="qRG-bj-ZP4" eventType="touchUpInside" id="2eN-7b-gV1"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="8bu-mC-Riy" firstAttribute="centerY" secondItem="LWS-V9-X2G" secondAttribute="centerY" type="default" id="dRf-cQ-b7J"/>
+                                            <constraint firstItem="8bu-mC-Riy" firstAttribute="centerX" secondItem="LWS-V9-X2G" secondAttribute="centerX" type="default" id="y6z-Gu-fvR"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Hop Additions" id="o0H-Js-CIW">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddHopsCell" textLabel="kYp-kD-Hrj" detailTextLabel="CIq-tS-1i8" style="IBUITableViewCellStyleValue1" id="EFZ-8L-ar0">
-                                        <rect key="frame" x="0.0" y="204" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="274" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="280" height="43"/>
@@ -364,7 +403,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
-                                            <segue destination="SDt-Wd-tMB" kind="modal" identifier="HopList" id="Voz-1K-Ofs"/>
+                                            <segue destination="tDu-7g-7Yh" kind="modal" identifier="RecipeAddHops" id="YYN-mv-n0M"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -388,6 +427,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="boilLengthButton" destination="8bu-mC-Riy" id="OGu-Gr-xh6"/>
+                        <outlet property="descriptionTextField" destination="Blc-oN-3QE" id="L0q-CZ-CzF"/>
                         <outlet property="detailLabel" destination="CIq-tS-1i8" id="fsz-gK-oV2"/>
                         <outlet property="nameTextField" destination="DhL-0U-Nty" id="8Ir-Wk-ivO"/>
                     </connections>
@@ -553,6 +594,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="gray_btn.png" width="146" height="60"/>
         <image name="green_btn.png" width="296" height="60"/>
         <image name="red_btn.png" width="146" height="60"/>
+        <image name="small_hops.jpg" width="100" height="139"/>
     </resources>
     <classes>
         <class className="AddHopsViewController" superclassName="UIViewController">
@@ -580,6 +622,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <relationships>
                 <relationship kind="action" name="cancel:"/>
                 <relationship kind="action" name="done:"/>
+                <relationship kind="action" name="touchBoilLengthTextField:"/>
+                <relationship kind="outlet" name="boilLengthButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="boilLengthTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="descriptionTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="detailLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
             </relationships>
@@ -608,4 +654,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="YYN-mv-n0M"/>
+    </inferredMetricsTieBreakers>
 </document>
