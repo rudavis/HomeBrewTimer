@@ -24,6 +24,7 @@
 @synthesize activeTxtField = _activeTxtField;
 @synthesize boilLengthButton = _boilLengthButton;
 @synthesize recipe = _recipe;
+@synthesize hopList = _hopList;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -49,6 +50,8 @@
     self.tableView.backgroundView=backgroundImageView;
     
     _recipe = [[Recipe alloc] init];
+    
+    _hopList = [NSMutableArray arrayWithCapacity:10];
 
 }
 
@@ -199,8 +202,28 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void) addHopsViewControllerDidSave:(AddHopsViewController *)controller {
-    [self dismissViewControllerAnimated:YES completion:nil];
+- (void) addHopsViewController:(AddHopsViewController *)controller didAddHop:(Hop *)hop {
+    
+    NSLog(@"Hop name:  %@", hop.name);
+    NSLog(@"Hop name:  %@", hop.weight);
+    NSLog(@"Hop name:  %@", hop.addTime);
+    
+    NSLog(@"HopList Array: %@", self.hopList);
+    
+    [_hopList addObject:hop];
+
+    NSLog(@"Added Hop so the HopList Array is now: %@", self.hopList);
+
+/*
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[self.hopList count] - 1
+                                                inSection:2];
+    
+    [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+                          withRowAnimation:UITableViewRowAnimationNone];
+
+    [self dismissViewControllerAnimated:YES
+                             completion:nil];
+*/
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

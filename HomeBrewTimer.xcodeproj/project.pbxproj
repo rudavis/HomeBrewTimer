@@ -23,6 +23,7 @@
 		C73031BC162F6FAB002C744A /* stopwatch.png in Resources */ = {isa = PBXBuildFile; fileRef = C73031BB162F6FAB002C744A /* stopwatch.png */; };
 		C739EAC116290855000E95CB /* RecipesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C739EAC016290855000E95CB /* RecipesViewController.m */; };
 		C739EAC5162908BB000E95CB /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = C739EAC4162908BB000E95CB /* Recipe.m */; };
+		C73EF97F16501B410038A6B1 /* Hop.m in Sources */ = {isa = PBXBuildFile; fileRef = C73EF97E16501B410038A6B1 /* Hop.m */; };
 		C7A2DF27164F15E700958672 /* HopListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A2DF26164F15E700958672 /* HopListViewController.m */; };
 		C7B5BDC71629B5AA002949B4 /* RecipeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B5BDC61629B5AA002949B4 /* RecipeDetailViewController.m */; };
 		C7B6C769163C130E00FF60DA /* NSDate+TCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B6C768163C130E00FF60DA /* NSDate+TCUtils.m */; };
@@ -59,6 +60,8 @@
 		C739EAC016290855000E95CB /* RecipesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipesViewController.m; sourceTree = "<group>"; };
 		C739EAC3162908BB000E95CB /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
 		C739EAC4162908BB000E95CB /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipe.m; sourceTree = "<group>"; };
+		C73EF97D16501B410038A6B1 /* Hop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hop.h; sourceTree = "<group>"; };
+		C73EF97E16501B410038A6B1 /* Hop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hop.m; sourceTree = "<group>"; };
 		C7A2DF25164F15E700958672 /* HopListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HopListViewController.h; sourceTree = "<group>"; };
 		C7A2DF26164F15E700958672 /* HopListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HopListViewController.m; sourceTree = "<group>"; };
 		C7B5BDC51629B5AA002949B4 /* RecipeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeDetailViewController.h; sourceTree = "<group>"; };
@@ -161,10 +164,12 @@
 		C7B6C761163C120300FF60DA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C739EAC3162908BB000E95CB /* Recipe.h */,
 				C7E5DB5B162DC7E200CF0F0D /* Timer.h */,
 				C7E5DB5C162DC7E200CF0F0D /* Timer.m */,
+				C739EAC3162908BB000E95CB /* Recipe.h */,
 				C739EAC4162908BB000E95CB /* Recipe.m */,
+				C73EF97D16501B410038A6B1 /* Hop.h */,
+				C73EF97E16501B410038A6B1 /* Hop.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -266,6 +271,7 @@
 				C7B6C769163C130E00FF60DA /* NSDate+TCUtils.m in Sources */,
 				C70FE56A164483F200548F09 /* AddHopsViewController.m in Sources */,
 				C7A2DF27164F15E700958672 /* HopListViewController.m in Sources */,
+				C73EF97F16501B410038A6B1 /* Hop.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

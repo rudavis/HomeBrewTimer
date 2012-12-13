@@ -34,6 +34,7 @@
 @property (strong, nonatomic) UIDatePicker *timerPicker;
 @property (strong, nonatomic) IBOutlet UIButton *boilLengthButton;
 @property (strong, nonatomic) Recipe *recipe;
+@property (strong, nonatomic) NSMutableArray *hopList;
 
 - (IBAction)done:(id)sender;
 - (IBAction)cancel:(id)sender;

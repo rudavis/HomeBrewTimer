@@ -17,17 +17,20 @@
 @synthesize delegate = _delegate;
 @synthesize hopName = _hopName;
 @synthesize hopWeight = _hopWeight;
-@synthesize hopTimeTextField = _hopTimeTextField;
 @synthesize inputAccView = _inputAccView;
 @synthesize btnDone = _btnDone;
 @synthesize btnNext = _btnNext;
 @synthesize btnPrev = _btnPrev;
 @synthesize activeTxtField = _activeTxtField;
 @synthesize segmentedControl = _segmentedControl;
+@synthesize hop = _hop;
 
 
-- (IBAction)done:(id)sender {
-    [self.delegate addHopsViewControllerDidSave:self];
+- (IBAction)save:(id)sender {
+    
+    _hop = [[Hop alloc]initWithName:_hopName.text weight:_hopWeight.text addTime:([[NSNumber alloc]initWithDouble:(_hopTime.countDownDuration / 60)])];
+    
+    [self.delegate addHopsViewController:self didAddHop:_hop];
 }
 
 - (IBAction)cancel:(id)sender {
@@ -77,22 +80,10 @@
             break;
         case 2:
             //Hop Weight
-            if (_segmentedControl.selectedSegmentIndex == 1){
-                [_hopTimeTextField becomeFirstResponder];
-                _activeTxtField = _hopTimeTextField;
-            }
-            else {
-                    [_hopName becomeFirstResponder];
-                    _activeTxtField = _hopName;
-            }
-            break;
-        case 3:
-            //Hop boil time
             if (_segmentedControl.selectedSegmentIndex == 0){
-                [_hopWeight becomeFirstResponder];
-                _activeTxtField = _hopWeight;
+                [_hopName becomeFirstResponder];
+                _activeTxtField = _hopName;
             }
-            break;
         default:
             break;
     }

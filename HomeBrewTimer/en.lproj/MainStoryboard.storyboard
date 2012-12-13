@@ -199,13 +199,6 @@
                                     <outlet property="delegate" destination="bg8-UY-EpE" id="Pmj-hy-isg"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Time to add hops" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TYl-2Q-XJE">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="bg8-UY-EpE" id="t2G-l5-TiG"/>
-                                </connections>
-                            </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="2700" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="jXe-tR-gBd">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="216" id="dQC-nA-WJd"/>
@@ -235,21 +228,27 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
 </data>
                                 </timeZone>
                             </datePicker>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Add Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJD-cI-Woy">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="CWN-EY-XnD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.9960784912109375" green="0.99215692281723022" blue="0.99215692281723022" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="AJD-cI-Woy" firstAttribute="leading" secondItem="pVO-MY-tf6" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="1Dm-vM-czF"/>
                             <constraint firstItem="v6E-5e-m6i" firstAttribute="bottom" secondItem="pVO-MY-tf6" secondAttribute="bottom" type="default" id="7oU-Yd-vNk"/>
                             <constraint firstItem="jXe-tR-gBd" firstAttribute="leading" secondItem="pVO-MY-tf6" secondAttribute="leading" type="default" id="G4U-83-Pss"/>
                             <constraint firstItem="IpR-3e-VS1" firstAttribute="top" secondItem="pVO-MY-tf6" secondAttribute="top" constant="54" id="G7J-hr-7PP"/>
                             <constraint firstItem="jXe-tR-gBd" firstAttribute="bottom" secondItem="pVO-MY-tf6" secondAttribute="bottom" type="default" id="KcI-57-Asz"/>
                             <constraint firstItem="v6E-5e-m6i" firstAttribute="leading" secondItem="pVO-MY-tf6" secondAttribute="leading" type="default" id="PHv-Tn-uzi"/>
                             <constraint firstAttribute="trailing" secondItem="IpR-3e-VS1" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="VJ5-Tt-wcM"/>
-                            <constraint firstAttribute="trailing" secondItem="TYl-2Q-XJE" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="WLD-S3-bjZ"/>
                             <constraint firstItem="FO4-l8-I8H" firstAttribute="leading" secondItem="pVO-MY-tf6" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="YlM-Db-Ib3"/>
-                            <constraint firstItem="jXe-tR-gBd" firstAttribute="trailing" secondItem="pVO-MY-tf6" secondAttribute="trailing" type="default" id="eeR-At-Zlq"/>
-                            <constraint firstItem="TYl-2Q-XJE" firstAttribute="leading" secondItem="pVO-MY-tf6" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="iRf-yY-3ld"/>
+                            <constraint firstItem="AJD-cI-Woy" firstAttribute="top" secondItem="pVO-MY-tf6" secondAttribute="top" constant="137" id="ezJ-HF-ZLd"/>
                             <constraint firstItem="IpR-3e-VS1" firstAttribute="leading" secondItem="pVO-MY-tf6" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="met-Ec-F24"/>
-                            <constraint firstItem="TYl-2Q-XJE" firstAttribute="top" secondItem="FO4-l8-I8H" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="mia-un-gZw"/>
                             <constraint firstAttribute="trailing" secondItem="FO4-l8-I8H" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="qfL-2x-Qre"/>
                             <constraint firstItem="v6E-5e-m6i" firstAttribute="top" secondItem="pVO-MY-tf6" secondAttribute="top" type="default" id="sok-5v-DZJ"/>
                             <constraint firstItem="FO4-l8-I8H" firstAttribute="top" secondItem="IpR-3e-VS1" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="zmB-mc-7ii"/>
@@ -261,16 +260,15 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <action selector="cancel:" destination="bg8-UY-EpE" id="8CB-xE-9bE"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="LQh-do-a5q">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="LQh-do-a5q">
                             <connections>
-                                <action selector="done:" destination="bg8-UY-EpE" id="aFs-BD-hAL"/>
+                                <action selector="save:" destination="bg8-UY-EpE" id="xQF-n6-wl6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="hopName" destination="IpR-3e-VS1" id="hha-Ni-nzG"/>
                         <outlet property="hopTime" destination="jXe-tR-gBd" id="YNw-Xn-3j0"/>
-                        <outlet property="hopTimeTextField" destination="TYl-2Q-XJE" id="EKQ-h2-g2q"/>
                         <outlet property="hopWeight" destination="FO4-l8-I8H" id="NUB-7E-d0Z"/>
                     </connections>
                 </viewController>
@@ -596,59 +594,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="red_btn.png" width="146" height="60"/>
         <image name="small_hops.jpg" width="100" height="139"/>
     </resources>
-    <classes>
-        <class className="AddHopsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddHopsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancel:"/>
-                <relationship kind="action" name="done:"/>
-                <relationship kind="outlet" name="hopName" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="hopTime" candidateClass="UIDatePicker"/>
-                <relationship kind="outlet" name="hopTimeTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="hopWeight" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="HopListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HopListViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancel:"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="RecipeDetailViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RecipeDetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancel:"/>
-                <relationship kind="action" name="done:"/>
-                <relationship kind="action" name="touchBoilLengthTextField:"/>
-                <relationship kind="outlet" name="boilLengthButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="boilLengthTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="descriptionTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="detailLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="RecipesViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RecipesViewController.h"/>
-        </class>
-        <class className="TimerViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TimerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancelTimer:"/>
-                <relationship kind="action" name="pauseOrResumeTimer:"/>
-                <relationship kind="action" name="selectTimerTextField:"/>
-                <relationship kind="action" name="startTimer:"/>
-                <relationship kind="outlet" name="cancelButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="pauseButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="startButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="timerDisplay" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="timerPicker" candidateClass="UIDatePicker"/>
-                <relationship kind="outlet" name="timerTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
