@@ -30,6 +30,8 @@
 		C7D38FAD164F1A8400ADE1B2 /* small_hops.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C7D38FAC164F1A8400ADE1B2 /* small_hops.jpg */; };
 		C7E5DB5D162DC7E200CF0F0D /* Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E5DB5C162DC7E200CF0F0D /* Timer.m */; };
 		C7E5DB60162DC80B00CF0F0D /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E5DB5F162DC80B00CF0F0D /* TimerViewController.m */; };
+		C7EB358F167BE34D000294AE /* bubbles.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C7EB358E167BE34D000294AE /* bubbles.jpg */; };
+		C7EB3592167BE35B000294AE /* beer_foam.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C7EB3591167BE35B000294AE /* beer_foam.jpg */; };
 		C7F716721643DB7C00DCAB78 /* green_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F7166F1643DB7C00DCAB78 /* green_btn.png */; };
 		C7F716731643DB7C00DCAB78 /* red_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F716701643DB7C00DCAB78 /* red_btn.png */; };
 		C7F716741643DB7C00DCAB78 /* black_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F716711643DB7C00DCAB78 /* black_btn.png */; };
@@ -73,6 +75,8 @@
 		C7E5DB5C162DC7E200CF0F0D /* Timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timer.m; sourceTree = "<group>"; };
 		C7E5DB5E162DC80B00CF0F0D /* TimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
 		C7E5DB5F162DC80B00CF0F0D /* TimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
+		C7EB358E167BE34D000294AE /* bubbles.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bubbles.jpg; sourceTree = "<group>"; };
+		C7EB3591167BE35B000294AE /* beer_foam.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beer_foam.jpg; sourceTree = "<group>"; };
 		C7F7166F1643DB7C00DCAB78 /* green_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_btn.png; sourceTree = "<group>"; };
 		C7F716701643DB7C00DCAB78 /* red_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_btn.png; sourceTree = "<group>"; };
 		C7F716711643DB7C00DCAB78 /* black_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black_btn.png; sourceTree = "<group>"; };
@@ -144,7 +148,9 @@
 				C71E2649164DD6FB00573B05 /* hops.jpg */,
 				C7F7166F1643DB7C00DCAB78 /* green_btn.png */,
 				C7F716761643DC6600DCAB78 /* gray_btn.png */,
+				C7EB3591167BE35B000294AE /* beer_foam.jpg */,
 				C7F716701643DB7C00DCAB78 /* red_btn.png */,
+				C7EB358E167BE34D000294AE /* bubbles.jpg */,
 				C7F716711643DB7C00DCAB78 /* black_btn.png */,
 				C7B6C767163C130E00FF60DA /* NSDate+TCUtils.h */,
 				C7B6C768163C130E00FF60DA /* NSDate+TCUtils.m */,
@@ -251,6 +257,8 @@
 				C7F716771643DC6600DCAB78 /* gray_btn.png in Resources */,
 				C71E264A164DD6FB00573B05 /* hops.jpg in Resources */,
 				C7D38FAD164F1A8400ADE1B2 /* small_hops.jpg in Resources */,
+				C7EB358F167BE34D000294AE /* bubbles.jpg in Resources */,
+				C7EB3592167BE35B000294AE /* beer_foam.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

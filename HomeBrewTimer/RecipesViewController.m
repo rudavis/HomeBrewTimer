@@ -30,11 +30,11 @@
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    //Set the tableView background image
+    self.tableView.backgroundColor=[UIColor clearColor];
+    UIImage *backgroundImage = [UIImage imageNamed:@"beer_foam.jpg"];
+    UIImageView *backgroundImageView = [[UIImageView alloc]initWithImage:backgroundImage];
+    self.tableView.backgroundView=backgroundImageView;
     
     _recipes = [NSMutableArray arrayWithCapacity:20];
     Recipe *recipe = [[Recipe alloc] init];
@@ -43,6 +43,12 @@
     recipe.boilLength = 60;
     [_recipes addObject:recipe];
     
+/*  Why doesn't this work?!
+    recipe.name = @"Number 2";
+    recipe.desc = @"yepyep";
+    recipe.boilLength = 90;
+    [_recipes addObject:recipe];
+*/
 }
 
 - (void)didReceiveMemoryWarning
