@@ -46,7 +46,7 @@
     
     _recipe = [[Recipe alloc] init];
     
-    _hopList = [NSMutableArray arrayWithCapacity:10];
+    _hopList = [[NSMutableArray alloc]init];
 
 }
 
