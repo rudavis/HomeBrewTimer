@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "RecipeDetailViewController.h"
+#import "RecipeTimerViewController.h"
+
+@class RecipesViewController;
 
 @interface RecipesViewController : UITableViewController <RecipeDetailViewControllerDelegate>
 
 @property (nonatomic, strong) NSMutableArray *recipes;
+
 
 @end

@@ -9,6 +9,8 @@
 #import "RecipesViewController.h"
 #import "Recipe.h"
 #import "MyCell.h"
+#import "MyCell2.h"
+#import "RecipeTimerViewController.h"
 
 @interface RecipesViewController ()
 
@@ -83,6 +85,25 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+
+    /*
+     //
+     //This section works with the default prototype
+     //
+     static NSString *cellIdentifier = @"RecipeCell";
+     
+     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+     if (cell == nil){
+     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+     }
+     cell.textLabel.text = [[self.recipes objectAtIndex:indexPath.row] name];
+     cell.detailTextLabel.text = [[self.recipes objectAtIndex:indexPath.row] desc];
+     
+     return cell;
+     */
+    
+    /*
+     //Stuff for MyCell.xib
     static NSString *cellIdentifier = @"MyCell";
     MyCell *cell = (MyCell *) [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
@@ -90,33 +111,80 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MyCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
-
-    //Sets the cell background color to transparent
-    cell.backgroundColor = [UIColor colorWithWhite:.75 alpha:.55];
     
     cell.recipeName.text = [[self.recipes objectAtIndex:indexPath.section] name];
     cell.recipeDescription.text = [[self.recipes objectAtIndex:indexPath.section] desc];
     cell.recipeBoilLength.text = [NSString stringWithFormat:@"%i", [[self.recipes objectAtIndex:indexPath.section] boilLength]];
+     
+     return cell;
+    */
     
-    return cell;
     
+    //Stuff for MyCell2.xib
+    static NSString *cellIdentifier = @"MyCell2";
+    MyCell2 *cell = (MyCell2 *) [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
-/*
- //
- //This section works with the default prototype
- //
-    static NSString *cellIdentifier = @"RecipeCell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (cell == nil){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    if (cell == nil) {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MyCell2" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
     }
-    cell.textLabel.text = [[self.recipes objectAtIndex:indexPath.row] name];
-    cell.detailTextLabel.text = [[self.recipes objectAtIndex:indexPath.row] desc];
+    
+    cell.cellRecipeName.text = [[self.recipes objectAtIndex:indexPath.section] name];
+    cell.cellRecipeDescription.text = [[self.recipes objectAtIndex:indexPath.section] desc];
+    cell.cellRecipeBoilLength.text = [NSString stringWithFormat:@"%i", [[self.recipes objectAtIndex:indexPath.section] boilLength]];
 
+
+    /*
+    //Programittacly add the buttons
+    //Container view
+    UIView *cellButtons = [[UIView alloc] initWithFrame:CGRectMake(10,63,300,40)];
+    [cellButtons setBackgroundColor:[UIColor lightGrayColor]];
+    
+    //Create Button, set the frame, Title, Action and add it to the container view.
+    UIButton *cellStartTimerButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [cellStartTimerButton setFrame:CGRectMake(0, 0, 149, 35)];
+    [cellStartTimerButton setTitle:@"Start Timer" forState:UIControlStateNormal];
+    [cellStartTimerButton addTarget:self action:@selector(startTimerPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [cellButtons addSubview:cellStartTimerButton];
+
+    //Create Button, set the frame, Title, Action and add it to the container view.
+    UIButton *cellEditRecipeButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [cellEditRecipeButton setFrame:CGRectMake(151, 0, 149, 35)];
+    [cellEditRecipeButton setTitle:@"Edit Recipe" forState:UIControlStateNormal];
+    [cellEditRecipeButton addTarget:self action:@selector(editRecipePressed:) forControlEvents:UIControlEventTouchUpInside];
+    [cellButtons addSubview:cellEditRecipeButton];
+
+    //
+    //UIButton *cellStartTimerButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 80, 150, 40)];
+    //[cellStartTimerButton setTitle:@"Start Timer" forState:UIControlStateNormal];
+    //[cellButtons addSubview:cellStartTimerButton];
+    
+    //UIButton *cellEditRecipe = [[UIButton alloc] initWithFrame:CGRectMake(150, 80, 150, 40)];
+    //[cellStartTimerButton setTitle:@"Edit Recipe" forState:UIControlStateNormal];
+    //[cellButtons addSubview:cellEditRecipe];
+    
+    [cell addSubview:cellButtons];
+    */
+    
+    //Sets the cell background color to transparent
+    cell.backgroundColor = [UIColor colorWithWhite:.75 alpha:.55];
+//    NSLog(@"Cell Loading index path: %@", indexPath);
+//    NSLog(@"recipes list: %@",self.recipes);
     return cell;
- 
-*/
+
+    
+}
+
+- (void) startTimerPressed: (id *)sender {
+    RecipeTimerViewController *destView = [self.storyboard instantiateViewControllerWithIdentifier:@"RecipeTimerViewController"];
+    [self.navigationController pushViewController:destView animated:YES];
+    //destView.delegate = self;
+}
+
+- (void) editRecipePressed: (id *)sender {
+    NSLog(@"Edit the Recipe");
+    [self performSegueWithIdentifier:@"AddRecipe" sender:self];
+    
 }
 
 - (void) recipeDetailViewControllerDidCancel:(RecipeDetailViewController *)controller {
@@ -124,11 +192,16 @@
 }
 
 -(void) recipeDetailViewController:(RecipeDetailViewController *)controller didAddRecipe:(Recipe *)recipe {
+
+    [self.tableView beginUpdates];
+
+    [self.tableView insertSections:[NSIndexSet indexSetWithIndex:[self.recipes count]]withRowAnimation:UITableViewRowAnimationAutomatic];
+    
     [self.recipes addObject:recipe];
-//TODO:  Replace Rows with Sections.
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[self.recipes count] -1 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    
     [self dismissViewControllerAnimated:YES completion:nil];
+    
+    [self.tableView endUpdates];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -197,9 +270,15 @@
 
 }
 
+-(void) tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{
+
+}
+
+/*
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 120;
 }
+ */
 
 @end

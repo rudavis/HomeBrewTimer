@@ -21,12 +21,15 @@
 		C728070D1628CE9500D74727 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C728070C1628CE9500D74727 /* Default-568h@2x.png */; };
 		C72807101628CE9500D74727 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C728070E1628CE9500D74727 /* MainStoryboard.storyboard */; };
 		C73031BC162F6FAB002C744A /* stopwatch.png in Resources */ = {isa = PBXBuildFile; fileRef = C73031BB162F6FAB002C744A /* stopwatch.png */; };
+		C7334125168F3FB2000C6A57 /* MyCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7334124168F3FB2000C6A57 /* MyCell2.xib */; };
+		C7334129168F404A000C6A57 /* MyCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = C7334128168F404A000C6A57 /* MyCell2.m */; };
 		C739EAC116290855000E95CB /* RecipesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C739EAC016290855000E95CB /* RecipesViewController.m */; };
 		C739EAC5162908BB000E95CB /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = C739EAC4162908BB000E95CB /* Recipe.m */; };
 		C73EF97F16501B410038A6B1 /* Hop.m in Sources */ = {isa = PBXBuildFile; fileRef = C73EF97E16501B410038A6B1 /* Hop.m */; };
 		C7A2DF27164F15E700958672 /* HopListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A2DF26164F15E700958672 /* HopListViewController.m */; };
 		C7A37434168E109E000BA8BF /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7A37433168E109E000BA8BF /* MyCell.xib */; };
 		C7A37438168E1204000BA8BF /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A37437168E1204000BA8BF /* MyCell.m */; };
+		C7B2145C16924A64004210E3 /* RecipeTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B2145B16924A64004210E3 /* RecipeTimerViewController.m */; };
 		C7B5BDC71629B5AA002949B4 /* RecipeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B5BDC61629B5AA002949B4 /* RecipeDetailViewController.m */; };
 		C7B6C769163C130E00FF60DA /* NSDate+TCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B6C768163C130E00FF60DA /* NSDate+TCUtils.m */; };
 		C7D38FAD164F1A8400ADE1B2 /* small_hops.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C7D38FAC164F1A8400ADE1B2 /* small_hops.jpg */; };
@@ -60,6 +63,9 @@
 		C728070C1628CE9500D74727 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C728070F1628CE9500D74727 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		C73031BB162F6FAB002C744A /* stopwatch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stopwatch.png; sourceTree = "<group>"; };
+		C7334124168F3FB2000C6A57 /* MyCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCell2.xib; sourceTree = "<group>"; };
+		C7334127168F404A000C6A57 /* MyCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCell2.h; sourceTree = "<group>"; };
+		C7334128168F404A000C6A57 /* MyCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCell2.m; sourceTree = "<group>"; };
 		C739EABF16290855000E95CB /* RecipesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipesViewController.h; sourceTree = "<group>"; };
 		C739EAC016290855000E95CB /* RecipesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipesViewController.m; sourceTree = "<group>"; };
 		C739EAC3162908BB000E95CB /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
@@ -71,6 +77,8 @@
 		C7A37433168E109E000BA8BF /* MyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
 		C7A37436168E1204000BA8BF /* MyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCell.h; sourceTree = "<group>"; };
 		C7A37437168E1204000BA8BF /* MyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCell.m; sourceTree = "<group>"; };
+		C7B2145A16924A64004210E3 /* RecipeTimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeTimerViewController.h; sourceTree = "<group>"; };
+		C7B2145B16924A64004210E3 /* RecipeTimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeTimerViewController.m; sourceTree = "<group>"; };
 		C7B5BDC51629B5AA002949B4 /* RecipeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeDetailViewController.h; sourceTree = "<group>"; };
 		C7B5BDC61629B5AA002949B4 /* RecipeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeDetailViewController.m; sourceTree = "<group>"; };
 		C7B6C767163C130E00FF60DA /* NSDate+TCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TCUtils.h"; sourceTree = "<group>"; };
@@ -145,6 +153,9 @@
 				C7A37433168E109E000BA8BF /* MyCell.xib */,
 				C7A37436168E1204000BA8BF /* MyCell.h */,
 				C7A37437168E1204000BA8BF /* MyCell.m */,
+				C7334124168F3FB2000C6A57 /* MyCell2.xib */,
+				C7334127168F404A000C6A57 /* MyCell2.h */,
+				C7334128168F404A000C6A57 /* MyCell2.m */,
 			);
 			path = HomeBrewTimer;
 			sourceTree = "<group>";
@@ -193,6 +204,8 @@
 			children = (
 				C739EABF16290855000E95CB /* RecipesViewController.h */,
 				C739EAC016290855000E95CB /* RecipesViewController.m */,
+				C7B2145A16924A64004210E3 /* RecipeTimerViewController.h */,
+				C7B2145B16924A64004210E3 /* RecipeTimerViewController.m */,
 				C7B5BDC51629B5AA002949B4 /* RecipeDetailViewController.h */,
 				C7B5BDC61629B5AA002949B4 /* RecipeDetailViewController.m */,
 				C7A2DF25164F15E700958672 /* HopListViewController.h */,
@@ -268,6 +281,7 @@
 				C7EB358F167BE34D000294AE /* bubbles.jpg in Resources */,
 				C7EB3592167BE35B000294AE /* beer_foam.jpg in Resources */,
 				C7A37434168E109E000BA8BF /* MyCell.xib in Resources */,
+				C7334125168F3FB2000C6A57 /* MyCell2.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +304,8 @@
 				C7A2DF27164F15E700958672 /* HopListViewController.m in Sources */,
 				C73EF97F16501B410038A6B1 /* Hop.m in Sources */,
 				C7A37438168E1204000BA8BF /* MyCell.m in Sources */,
+				C7334129168F404A000C6A57 /* MyCell2.m in Sources */,
+				C7B2145C16924A64004210E3 /* RecipeTimerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

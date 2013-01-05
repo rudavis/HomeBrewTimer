@@ -8,29 +8,17 @@
         <scene sceneID="alV-5M-aTG">
             <objects>
                 <tableViewController id="Qff-Ae-gAQ" customClass="RecipesViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="6C4-SB-ge0">
+                    <tableView key="view" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="97" sectionHeaderHeight="10" sectionFooterHeight="10" id="6C4-SB-ge0">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RecipeCell" textLabel="zeS-kh-F1s" detailTextLabel="Mgd-Ce-WDY" style="IBUITableViewCellStyleSubtitle" id="7Wj-4t-HIk">
-                                <rect key="frame" x="0.0" y="46" width="320" height="46"/>
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RecipeCell" rowHeight="97" id="7Wj-4t-HIk">
+                                <rect key="frame" x="0.0" y="46" width="320" height="99"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                    <rect key="frame" x="10" y="1" width="267" height="96"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeS-kh-F1s">
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </label>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mgd-Ce-WDY">
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </label>
-                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                             </tableViewCell>
@@ -43,7 +31,7 @@
                     <navigationItem key="navigationItem" title="Recipes" id="R9W-zO-7DO">
                         <barButtonItem key="rightBarButtonItem" title="+" id="92z-5V-8A0">
                             <connections>
-                                <segue destination="dpN-QP-Cgc" kind="modal" identifier="AddRecipe" modalTransitionStyle="partialCurl" id="aw2-Bb-oGf"/>
+                                <segue destination="dpN-QP-Cgc" kind="modal" identifier="AddRecipe" modalTransitionStyle="coverVertical" id="aw2-Bb-oGf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -55,7 +43,7 @@
         <!--Timer View Controller - Timer-->
         <scene sceneID="dSg-s8-FT2">
             <objects>
-                <viewController title="Timer" id="42o-12-j7o" customClass="TimerViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TimerViewController" title="Timer" id="42o-12-j7o" customClass="TimerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kIZ-Gb-drt">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -279,7 +267,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <!--Recipe Detail View Controller - Add Recipe-->
         <scene sceneID="ec6-IM-9nC">
             <objects>
-                <tableViewController id="qRG-bj-ZP4" customClass="RecipeDetailViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="" id="qRG-bj-ZP4" customClass="RecipeDetailViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="wsi-oQ-1CT">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -494,6 +482,85 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="653" y="-159"/>
         </scene>
+        <!--Recipe Timer View Controller-->
+        <scene sceneID="h5f-Cc-zbB">
+            <objects>
+                <viewController storyboardIdentifier="RecipeTimerViewController" id="APa-8E-5NZ" customClass="RecipeTimerViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QQs-HB-jWB">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="beer_foam.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="f2j-vF-geG"/>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52I-9K-vvP">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="81" id="MUL-yN-3go"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="75"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Recipe Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xv-Gu-zXe">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="vad-Im-OQE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Recipe Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Zy-FO-0n0">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="ApJ-Qi-tkB">
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Khg-1j-NK0"/>
+                                    <barButtonItem title="Start Timer" id="1gf-h1-xvQ">
+                                        <connections>
+                                            <action selector="startTimerPressed:" destination="APa-8E-5NZ" id="0YO-MX-4ZQ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ykI-Vz-ZSH"/>
+                                    <barButtonItem title="Pause Timer" id="5ZM-C5-ISx">
+                                        <connections>
+                                            <action selector="pauseTimerPressed:" destination="APa-8E-5NZ" id="qFc-NF-nQa"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="sdH-uK-ggy"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f2j-vF-geG" firstAttribute="top" secondItem="QQs-HB-jWB" secondAttribute="top" type="default" id="7Lm-ze-BbP"/>
+                            <constraint firstAttribute="trailing" secondItem="52I-9K-vvP" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Cvf-vE-do8"/>
+                            <constraint firstItem="ApJ-Qi-tkB" firstAttribute="bottom" secondItem="QQs-HB-jWB" secondAttribute="bottom" type="default" id="Dtw-cU-b29"/>
+                            <constraint firstItem="ApJ-Qi-tkB" firstAttribute="trailing" secondItem="QQs-HB-jWB" secondAttribute="trailing" type="default" id="EJX-o3-mOd"/>
+                            <constraint firstAttribute="trailing" secondItem="4Zy-FO-0n0" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="G8v-Eb-qjo"/>
+                            <constraint firstItem="4Zy-FO-0n0" firstAttribute="top" secondItem="0xv-Gu-zXe" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Hk8-p4-UfD"/>
+                            <constraint firstItem="0xv-Gu-zXe" firstAttribute="leading" secondItem="QQs-HB-jWB" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="OCz-MX-Uzj"/>
+                            <constraint firstItem="52I-9K-vvP" firstAttribute="top" secondItem="QQs-HB-jWB" secondAttribute="top" constant="233" id="UDB-UR-gmP"/>
+                            <constraint firstItem="ApJ-Qi-tkB" firstAttribute="leading" secondItem="QQs-HB-jWB" secondAttribute="leading" type="default" id="WLb-G0-3XL"/>
+                            <constraint firstItem="0xv-Gu-zXe" firstAttribute="top" secondItem="QQs-HB-jWB" secondAttribute="top" constant="20" symbolic="YES" type="default" id="YCx-de-Ri0"/>
+                            <constraint firstItem="f2j-vF-geG" firstAttribute="leading" secondItem="QQs-HB-jWB" secondAttribute="leading" type="default" id="aqm-QU-h2u"/>
+                            <constraint firstItem="f2j-vF-geG" firstAttribute="bottom" secondItem="QQs-HB-jWB" secondAttribute="bottom" type="default" id="fmK-MT-PPM"/>
+                            <constraint firstAttribute="trailing" secondItem="0xv-Gu-zXe" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="hWS-jt-Djn"/>
+                            <constraint firstItem="52I-9K-vvP" firstAttribute="leading" secondItem="QQs-HB-jWB" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="hnC-Wa-hye"/>
+                            <constraint firstItem="4Zy-FO-0n0" firstAttribute="leading" secondItem="QQs-HB-jWB" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="swy-wh-c8N"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ltq-J9-L3x"/>
+                    <connections>
+                        <outlet property="description" destination="4Zy-FO-0n0" id="Zwv-1f-76S"/>
+                        <outlet property="name" destination="0xv-Gu-zXe" id="jv0-4t-QqP"/>
+                        <outlet property="pauseButton" destination="5ZM-C5-ISx" id="Pm4-fC-M1V"/>
+                        <outlet property="startButton" destination="1gf-h1-xvQ" id="hNJ-zK-QQ1"/>
+                        <outlet property="timeRemaining" destination="52I-9K-vvP" id="3hj-AT-swq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nG2-cJ-Dgo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2045" y="-890"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="D6h-Du-mYT">
             <objects>
@@ -531,25 +598,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="2628" y="-149"/>
         </scene>
-        <!--Navigation Controller - Timer-->
-        <scene sceneID="i15-CE-Ncm">
-            <objects>
-                <navigationController title="Timer" navigationBarHidden="YES" id="hek-9V-TK7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Timer" id="Kvw-sS-i36"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WEQ-2m-moW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="42o-12-j7o" kind="relationship" relationship="rootViewController" id="an3-Hu-UOb"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QW5-r0-GYq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="653" y="519"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ecm-YG-S0C">
             <objects>
@@ -568,9 +616,28 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="1523" y="517"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qjt-3a-PkH">
+            <objects>
+                <navigationController id="1av-Cn-oXn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ojR-uj-cqs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="APa-8E-5NZ" kind="relationship" relationship="rootViewController" id="OaH-P0-Wbx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Ve-Jf-ZJN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1519" y="-890"/>
+        </scene>
     </scenes>
     <resources>
         <image name="background_image.png" width="320" height="480"/>
+        <image name="beer_foam.jpg" width="320" height="480"/>
         <image name="gray_btn.png" width="146" height="60"/>
         <image name="green_btn.png" width="296" height="60"/>
         <image name="red_btn.png" width="146" height="60"/>
@@ -609,6 +676,18 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
             </relationships>
         </class>
+        <class className="RecipeTimerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RecipeTimerViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="pauseTimerPressed:"/>
+                <relationship kind="action" name="startTimerPressed:"/>
+                <relationship kind="outlet" name="description" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="name" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="pauseButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="startButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="timeRemaining" candidateClass="UILabel"/>
+            </relationships>
+        </class>
         <class className="RecipesViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RecipesViewController.h"/>
         </class>
@@ -634,6 +713,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="YYN-mv-n0M"/>
+        <segue reference="WlW-py-U1I"/>
     </inferredMetricsTieBreakers>
 </document>
